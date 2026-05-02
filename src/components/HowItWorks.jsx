@@ -6,19 +6,19 @@ gsap.registerPlugin(ScrollTrigger);
 
 const steps = [
   {
-    number: '01',
+    number: '1',
     title: 'Tell us what you need.',
     description:
       'You describe the task — in plain language, a voice note, a doc, a Figma file. Anything works. Any business, any size.',
   },
   {
-    number: '02',
+    number: '2',
     title: 'Our AI gets to work.',
     description:
       "aetomation's AI models break the task into components, assign the right automation stack, and begin building in parallel.",
   },
   {
-    number: '03',
+    number: '3',
     title: 'You receive the output.',
     description:
       'A working product, automation, or solution — delivered and deployed. You review, we refine. Done.',
@@ -116,25 +116,33 @@ const HowItWorks = () => {
           </svg>
 
           {/* Steps Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 md:gap-12 relative z-10 pt-16 md:pt-20">
             {steps.map((step) => (
-              <div key={step.number} className="step-card relative">
-                {/* Step Number */}
-                <span className="absolute -top-8 -left-2 font-mono text-[6rem] md:text-[8rem] text-white/10 leading-none select-none pointer-events-none">
+              <div key={step.number} className="step-card relative group">
+                {/* Step Number (Background Decor) */}
+                <span 
+                  className="absolute -top-20 -left-6 md:-top-28 md:-left-10
+                            font-display text-[8rem] md:text-[10rem]
+                            leading-none select-none pointer-events-none z-0
+                            text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.12)]
+                            group-hover:[-webkit-text-stroke:1px_rgba(255,255,255,0.25)]
+                            transition-all duration-700 ease-out translate-y-4 group-hover:translate-y-0"
+                >
                   {step.number}
                 </span>
 
-                {/* Card Content */}
-                <div className="relative bg-[#1A1A1A] rounded-3xl p-8 md:p-10 border border-[#333333] shadow-sm">
-                  <div className="flex items-center gap-3 mb-4">
-                    <span className="w-8 h-8 rounded-full bg-white text-black flex items-center justify-center font-mono text-sm">
+                {/* Card Context */}
+                <div className="relative z-10 bg-[#1A1A1A]/80 backdrop-blur-xl rounded-3xl p-8 md:p-10 border border-[#333333] shadow-[0_8px_32px_rgba(0,0,0,0.4)]
+                                transition-all duration-500 hover:bg-[#1f1f1f]/90 hover:-translate-y-1">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-mono text-sm font-bold shadow-[0_0_15px_rgba(255,255,255,0.3)]">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-display text-xl md:text-2xl text-text-primary mb-3">
+                  <h3 className="font-display text-xl md:text-2xl text-white mb-4">
                     {step.title}
                   </h3>
-                  <p className="font-body text-text-secondary leading-relaxed">
+                  <p className="font-body text-[#A1A1AA] leading-relaxed text-sm md:text-base">
                     {step.description}
                   </p>
                 </div>
