@@ -6,7 +6,8 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import WhatIsAetomation from './components/WhatIsAetomation';
 
-// Lazy Load heavy below-the-fold components
+// Lazy Load pages & heavy below-the-fold components
+const BlogPage = lazy(() => import('./components/BlogPage'));
 const SocialProof = lazy(() => import('./components/SocialProof'));
 const Features = lazy(() => import('./components/Features'));
 const HowItWorks = lazy(() => import('./components/HowItWorks'));
@@ -19,6 +20,7 @@ const Footer = lazy(() => import('./components/Footer'));
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [showContent, setShowContent] = useState(false);
+  const [currentPage, setCurrentPage] = useState('home'); // 'home' or 'blog'
 
   // Initialize smooth scroll
   useLenis();
@@ -38,28 +40,36 @@ function App() {
       {showContent && <CustomCursor />}
 
       {/* Navigation */}
-      <Navbar />
+      <Navbar onNavigate={setCurrentPage} currentPage={currentPage} />
 
       {/* Main Content */}
       <main>
-        <Hero />
-        <WhatIsAetomation />
-        
-        {/* Suspense Wrapper for heavy below-the-fold components */}
-        <Suspense fallback={<div className="h-32 bg-[#050505] w-full" />}>
-          <SocialProof />
-          <Features />
-          <HowItWorks />
-          <Philosophy />
-          <Stats />
-          <Testimonials />
-          <FinalCTA />
-        </Suspense>
+        {currentPage === 'home' ? (
+          <>
+            <Hero />
+            <WhatIsAetomation />
+            
+            {/* Suspense Wrapper for heavy below-the-fold components */}
+            <Suspense fallback={<div className="h-32 bg-[#050505] w-full" />}>
+              <SocialProof />
+              <Features />
+              <HowItWorks />
+              <Philosophy />
+              <Stats />
+              <Testimonials />
+              <FinalCTA />
+            </Suspense>
+          </>
+        ) : (
+          <Suspense fallback={<div className="h-screen bg-[#050505] w-full" />}>
+            <BlogPage onNavigate={setCurrentPage} />
+          </Suspense>
+        )}
       </main>
 
       {/* Footer */}
       <Suspense fallback={<div className="h-32 bg-[#050505] w-full" />}>
-        <Footer />
+        <Footer onNavigate={setCurrentPage} />
       </Suspense>
     </div>
   );

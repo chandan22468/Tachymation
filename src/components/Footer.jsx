@@ -1,7 +1,7 @@
 import { Twitter, Linkedin, Github } from 'lucide-react';
 import eagleLogo from '../assets/eagle.png';
 
-const Footer = () => {
+const Footer = ({ onNavigate }) => {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -15,7 +15,10 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Left: Logo & Tagline */}
-          <div>
+          <div className="cursor-pointer" onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (onNavigate) onNavigate('home');
+          }}>
             <img
               src={eagleLogo}
               alt="aetomation"
@@ -31,25 +34,37 @@ const Footer = () => {
           {/* Center: Navigation */}
           <div className="flex flex-wrap gap-6 md:justify-center">
             <button
-              onClick={() => scrollToSection('features')}
+              onClick={() => {
+                if (onNavigate) onNavigate('home');
+                setTimeout(() => scrollToSection('features'), 100);
+              }}
               className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
             >
               Product
             </button>
             <button
-              onClick={() => scrollToSection('philosophy')}
+              onClick={() => {
+                if (onNavigate) onNavigate('home');
+                setTimeout(() => scrollToSection('philosophy'), 100);
+              }}
               className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
             >
               Company
             </button>
             <button
-              onClick={() => scrollToSection('how-it-works')}
+              onClick={() => {
+                if (onNavigate) onNavigate('home');
+                setTimeout(() => scrollToSection('how-it-works'), 100);
+              }}
               className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
             >
               Use Cases
             </button>
             <button
-              onClick={() => alert('Blog coming soon')}
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                if (onNavigate) onNavigate('blog');
+              }}
               className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
             >
               Blog

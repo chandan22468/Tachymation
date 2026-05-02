@@ -22,7 +22,7 @@ const MagneticButton = ({ children, className, onClick }) => {
   );
 };
 
-const Navbar = () => {
+const Navbar = ({ onNavigate, currentPage }) => {
   const navRef = useRef(null);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -67,7 +67,10 @@ const Navbar = () => {
       <div className="flex items-center gap-8">
         {/* Logo */}
         <button 
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (onNavigate) onNavigate('home');
+          }}
           className="flex items-center gap-2"
         >
           <img
@@ -81,35 +84,61 @@ const Navbar = () => {
         {/* Nav Links */}
         <div className="hidden md:flex items-center gap-6">
           <button
-            onClick={() => scrollToSection('features')}
+            onClick={() => {
+              if (onNavigate) onNavigate('home');
+              setTimeout(() => scrollToSection('features'), 100);
+            }}
             className="font-body text-sm text-text-secondary hover:text-text-primary transition-colors duration-300"
           >
             Product
           </button>
           <button
-            onClick={() => scrollToSection('how-it-works')}
+            onClick={() => {
+              if (onNavigate) onNavigate('home');
+              setTimeout(() => scrollToSection('how-it-works'), 100);
+            }}
             className="font-body text-sm text-text-secondary hover:text-text-primary transition-colors duration-300"
           >
             Process
           </button>
           <button
-            onClick={() => scrollToSection('philosophy')}
+            onClick={() => {
+              if (onNavigate) onNavigate('home');
+              setTimeout(() => scrollToSection('philosophy'), 100);
+            }}
             className="font-body text-sm text-text-secondary hover:text-text-primary transition-colors duration-300"
           >
             Philosophy
           </button>
           <button
-            onClick={() => scrollToSection('testimonials')}
+            onClick={() => {
+              if (onNavigate) onNavigate('home');
+              setTimeout(() => scrollToSection('testimonials'), 100);
+            }}
             className="font-body text-sm text-text-secondary hover:text-text-primary transition-colors duration-300"
           >
             Stories
+          </button>
+          <button
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+              if (onNavigate) onNavigate('blog');
+            }}
+            className={`font-body text-sm transition-colors duration-300 ${
+              currentPage === 'blog' ? 'text-white font-semibold' : 'text-text-secondary hover:text-text-primary'
+            }`}
+          >
+            Blog
           </button>
         </div>
 
         {/* CTA Button */}
         <MagneticButton
           className="bg-white text-black font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white/90 transition-colors duration-300"
-          onClick={() => scrollToSection('cta')}
+          onClick={() => {
+            if (onNavigate) onNavigate('home');
+            setTimeout(() => scrollToSection('cta'), 100);
+          }}
         >
           Get Access
         </MagneticButton>
