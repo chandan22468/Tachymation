@@ -10,7 +10,7 @@ const testimonials = [
     location: 'Mumbai',
   },
   {
-    quote: "Every agency we'd tried took 8 weeks and delivered something we had to rebuild anyway. aetomation shipped a working product in 3 days.",
+    quote: "Every agency we'd tried took 8 weeks and delivered something we had to rebuild anyway. tachymation shipped a working product in 3 days.",
     author: 'Priya Nair',
     role: 'VP Engineering, D2C Brand',
     location: 'Bangalore',

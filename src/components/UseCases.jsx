@@ -4,7 +4,7 @@ const useCases = [
   {
     category: 'Websites & Web Platforms',
     heading: 'AI-Built Web Platforms That Convert',
-    body: 'Aetomation designs and deploys high-performance websites and web applications using AI automation tools. From landing pages to full-stack SaaS platforms, our AI builds, tests, and deploys in hours — not weeks. Every platform is architected to load instantly and convert visitors using predictive AI logic.',
+    body: 'Tachymation designs and deploys high-performance websites and web applications using AI automation tools. From landing pages to full-stack SaaS platforms, our AI builds, tests, and deploys in hours — not weeks. Every platform is architected to load instantly and convert visitors using predictive AI logic.',
     tags: ['Landing Pages', 'SaaS Platforms', 'E-commerce', 'Dashboards'],
     stat: '4m 12s',
     statLabel: 'avg. deploy time',
@@ -12,7 +12,7 @@ const useCases = [
   {
     category: 'Business Workflow Automation',
     heading: 'Automate Every Business Process With AI',
-    body: "Aetomation's workflow automation connects your CRM, ERP, Slack, databases, and email into a single intelligent pipeline. We automate business processes including invoice reconciliation, data entry, report generation, lead routing, and customer onboarding — eliminating manual work entirely. Our AI automation tools run 24/7 with zero human intervention required.",
+    body: "Tachymation's workflow automation connects your CRM, ERP, Slack, databases, and email into a single intelligent pipeline. We automate business processes including invoice reconciliation, data entry, report generation, lead routing, and customer onboarding — eliminating manual work entirely. Our AI automation tools run 24/7 with zero human intervention required.",
     tags: ['CRM Sync', 'Invoice Processing', 'Report Generation', 'Lead Routing'],
     stat: '94%',
     statLabel: 'tasks without human touch',
@@ -20,7 +20,7 @@ const useCases = [
   {
     category: 'Enterprise System Integration',
     heading: 'Enterprise Automation at Any Scale',
-    body: "For large organisations, Aetomation builds bespoke enterprise automation systems that integrate across legacy infrastructure, cloud services, and modern APIs. Our AI automation platform handles complex multi-system orchestration — from data pipelines to compliance workflows — giving enterprise teams the tools to automate business processes at scale without rebuilding their entire stack.",
+    body: "For large organisations, Tachymation builds bespoke enterprise automation systems that integrate across legacy infrastructure, cloud services, and modern APIs. Our AI automation platform handles complex multi-system orchestration — from data pipelines to compliance workflows — giving enterprise teams the tools to automate business processes at scale without rebuilding their entire stack.",
     tags: ['Legacy Integration', 'Cloud Pipelines', 'Compliance', 'Multi-system Orchestration'],
     stat: '3,200+',
     statLabel: 'hours saved per client / quarter',
@@ -31,7 +31,7 @@ const UseCases = () => {
   return (
     <section
       id="use-cases"
-      aria-label="Aetomation Use Cases"
+      aria-label="Tachymation Use Cases"
       className="w-full py-24 md:py-32 px-6 md:px-16 bg-[#0a0a0a]"
     >
       <div className="max-w-7xl mx-auto">
@@ -40,10 +40,10 @@ const UseCases = () => {
             Use Cases
           </p>
           <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-tight mb-6">
-            What Aetomation automates for your business
+            What Tachymation automates for your business
           </h2>
           <p className="text-lg text-gray-400 font-light leading-relaxed">
-            From solo founders to enterprise teams — Aetomation is the AI automation platform that replaces
+            From solo founders to enterprise teams — Tachymation is the AI automation platform that replaces
             repetitive work across every layer of your business. Explore how businesses use our
             AI automation tools to move faster.
           </p>
@@ -93,13 +93,13 @@ const UseCases = () => {
 
         <div className="mt-16 p-8 md:p-10 rounded-3xl border border-white/5 bg-white/[0.02] text-center">
           <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
-            Aetomation is an AI automation platform — not just a tool
+            Tachymation is an AI automation platform — not just a tool
           </h3>
           <p className="text-gray-400 text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-            Unlike no-code workflow builders or generic automation tools, Aetomation is a full-service
+            Unlike no-code workflow builders or generic automation tools, Tachymation is a full-service
             AI automation platform. We handle the full lifecycle: designing the automation logic,
             building the infrastructure, deploying it, and maintaining it. When businesses need to
-            automate business processes with real intelligence — they choose Aetomation.
+            automate business processes with real intelligence — they choose Tachymation.
           </p>
         </div>
       </div>

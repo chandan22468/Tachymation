@@ -19,10 +19,10 @@ const Footer = () => {
 
           {/* Left: Logo & Tagline */}
           <div>
-            <Link to="/" aria-label="Aetomation home">
+            <Link to="/" aria-label="Tachymation home">
               <img
                 src={eagleLogo}
-                alt="Aetomation — AI Automation Platform"
+                alt="Tachymation — AI Automation Platform"
                 width="32"
                 height="32"
                 className="h-8 w-auto mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
@@ -34,7 +34,7 @@ const Footer = () => {
               Eagle-like speed. Enterprise-grade output.
             </p>
             <p className="font-body text-text-secondary text-xs mt-2 max-w-[220px] leading-relaxed">
-              Aetomation is an AI automation platform for businesses and startups.
+              Tachymation is an AI automation platform for businesses and startups.
             </p>
           </div>
 
@@ -58,29 +58,29 @@ const Footer = () => {
           <div className="flex flex-col md:items-end gap-4">
             <div className="flex items-center gap-4">
               <a
-                href="https://twitter.com/aetomation"
+                href="https://twitter.com/tachymation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="Aetomation on Twitter"
+                aria-label="Tachymation on Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/company/aetomation"
+                href="https://linkedin.com/company/tachymation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="Aetomation on LinkedIn"
+                aria-label="Tachymation on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/aetomation"
+                href="https://github.com/tachymation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="Aetomation on GitHub"
+                aria-label="Tachymation on GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -99,7 +99,7 @@ const Footer = () => {
             <span className="font-mono text-xs text-green-500">System Operational</span>
           </div>
           <p className="font-body text-xs text-text-secondary">
-            © {new Date().getFullYear()} Aetomation. All rights reserved.
+            © {new Date().getFullYear()} Tachymation. All rights reserved.
           </p>
         </div>
       </div>

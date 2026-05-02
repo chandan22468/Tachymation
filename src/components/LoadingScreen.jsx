@@ -54,7 +54,7 @@ const LoadingScreen = ({ onComplete }) => {
     };
   }, [onComplete]);
 
-  const brandName = 'Aetomation';
+  const brandName = 'Tachymation';
 
   return (
     <div

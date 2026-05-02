@@ -78,7 +78,7 @@ const ShinyLogo = ({ className = "" }) => {
         <div className="relative overflow-hidden rounded-2xl group">
           <img 
             src={logoImage}
-            alt="aetomation Logo" 
+            alt="tachymation Logo" 
             className="h-24 md:h-32 w-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10"
             loading="lazy"
             decoding="async"

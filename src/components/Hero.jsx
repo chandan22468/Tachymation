@@ -145,7 +145,7 @@ const Hero = () => {
         {/* ── LEFT TEXT ── */}
         <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left max-w-[640px] mx-auto md:mx-0">
           <p className="tracking-[0.45em] text-[10px] md:text-xs text-white/40 mb-4 md:mb-6 uppercase font-semibold">
-            aetomation SYSTEM
+            tachymation SYSTEM
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[75px] font-black italic uppercase leading-[0.9] tracking-[-0.02em] text-white break-words w-full">
@@ -180,7 +180,7 @@ const Hero = () => {
             {/* Eagle logo */}
             <img
               src="/favicon.webp"
-              alt="aetomation Eagle"
+              alt="tachymation Eagle"
               width="620"
               height="620"
               loading="eager"

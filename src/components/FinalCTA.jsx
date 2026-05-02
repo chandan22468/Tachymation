@@ -70,7 +70,7 @@ const FinalCTA = () => {
           Your next solution is already building.
         </p>
         <p className="font-body text-sm text-black/40 mb-10 max-w-lg mx-auto leading-relaxed">
-          Aetomation is the AI automation platform trusted by startups and enterprises to
+          Tachymation is the AI automation platform trusted by startups and enterprises to
           automate business processes, deploy web platforms, and eliminate workflow bottlenecks — fast.
         </p>
 

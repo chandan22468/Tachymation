@@ -1,18 +1,18 @@
 import React from 'react';
 
-const WhatIsAetomation = () => {
+const WhatIsTachymation = () => {
   return (
     <section
-      id="what-is-aetomation"
-      aria-label="What is Aetomation"
+      id="what-is-tachymation"
+      aria-label="What is Tachymation"
       className="relative w-full bg-[#050505] text-white py-24 md:py-32 px-4 sm:px-8 md:px-16 z-20"
     >
       <div className="max-w-[1000px] mx-auto text-center">
         <p className="text-[10px] md:text-xs text-white/40 tracking-[0.4em] uppercase font-semibold mb-4">
-          What is Aetomation?
+          What is Tachymation?
         </p>
         <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-8 leading-tight text-white tracking-tight">
-          Aetomation is an{' '}
+          Tachymation is an{' '}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">
             AI Automation Platform
           </span>{' '}
@@ -20,7 +20,7 @@ const WhatIsAetomation = () => {
         </h2>
 
         <p className="text-lg md:text-xl text-gray-400 font-light leading-relaxed mb-12 max-w-[700px] mx-auto">
-          <strong className="text-white font-medium">Aetomation</strong> builds autonomous workflows,
+          <strong className="text-white font-medium">Tachymation</strong> builds autonomous workflows,
           AI-powered web platforms, and{' '}
           <strong className="text-white font-medium">business automation tools</strong> - delivered
           10x faster than traditional development.
@@ -53,4 +53,4 @@ const WhatIsAetomation = () => {
   );
 };
 
-export default WhatIsAetomation;
+export default WhatIsTachymation;

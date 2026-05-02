@@ -1,13 +1,13 @@
 <div align="center">
 
-  <h1>Aetomation</h1>
+  <h1>Tachymation</h1>
   <p><strong>AI Automation Platform for Businesses and Startups</strong></p>
   <p>Automate workflows, build AI-powered web platforms, and integrate enterprise systems - 10x faster than traditional development.</p>
 
   <br />
 
-  <a href="https://aetomation.vercel.app" target="_blank">
-    <strong>aetomation.vercel.app</strong>
+  <a href="https://tachymation.vercel.app" target="_blank">
+    <strong>tachymation.vercel.app</strong>
   </a>
 
   <br /><br />
@@ -24,13 +24,13 @@
 
 ---
 
-## What is Aetomation?
+## What is Tachymation?
 
-**[Aetomation](https://aetomation.vercel.app)** is an AI automation platform that replaces manual, repetitive business work with intelligent systems. Unlike generic no-code tools, Aetomation handles the full lifecycle - designing the automation logic, building the infrastructure, deploying it, and maintaining it.
+**[Tachymation](https://tachymation.vercel.app)** is an AI automation platform that replaces manual, repetitive business work with intelligent systems. Unlike generic no-code tools, Tachymation handles the full lifecycle - designing the automation logic, building the infrastructure, deploying it, and maintaining it.
 
-Businesses that need to automate business processes, reduce operational overhead, or ship intelligent web platforms choose Aetomation.
+Businesses that need to automate business processes, reduce operational overhead, or ship intelligent web platforms choose Tachymation.
 
-> Aetomation clients save an average of **3,200+ hours per quarter** through AI automation tools.
+> Tachymation clients save an average of **3,200+ hours per quarter** through AI automation tools.
 
 ---
 
@@ -67,7 +67,7 @@ Businesses that need to automate business processes, reduce operational overhead
 ## Project Structure
 
 ```text
-Aetomation/
+Tachymation/
 ├── public/
 │   ├── sitemap.xml              # All 6 page URLs for search indexing
 │   ├── robots.txt               # Search engine crawl rules
@@ -79,7 +79,7 @@ Aetomation/
 │   │   ├── Navbar.jsx           # Fixed nav with NavLink active states
 │   │   ├── Footer.jsx           # Crawlable footer links
 │   │   ├── Hero.jsx             # Three.js particle hero
-│   │   ├── WhatIsAetomation.jsx
+│   │   ├── WhatIsTachymation.jsx
 │   │   ├── Features.jsx
 │   │   ├── UseCases.jsx
 │   │   ├── HowItWorks.jsx
@@ -122,8 +122,8 @@ Aetomation/
 
 ```bash
 # Clone the repository
-git clone https://github.com/darshanpurohit20/Aetomation.git
-cd Aetomation
+git clone https://github.com/darshanpurohit20/Tachymation.git
+cd Tachymation
 
 # Install dependencies
 npm install
@@ -210,10 +210,10 @@ The site is fully optimised for Google sitelinks and rich search appearance:
 
 ## Contact
 
-Built and maintained by the Aetomation team.
+Built and maintained by the Tachymation team.
 
-- **Website:** [aetomation.vercel.app](https://aetomation.vercel.app)
-- **Contact form:** [aetomation.vercel.app/contact](https://aetomation.vercel.app/contact)
+- **Website:** [tachymation.vercel.app](https://tachymation.vercel.app)
+- **Contact form:** [tachymation.vercel.app/contact](https://tachymation.vercel.app/contact)
 
 ---
 

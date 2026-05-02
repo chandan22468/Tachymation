@@ -36,7 +36,7 @@ const BlogPage = () => {
         <div className="flex flex-wrap items-center gap-6 text-sm text-gray-400 font-light">
           <div className="flex items-center gap-2">
             <User className="w-4 h-4" />
-            <span>Aetomation Team</span>
+            <span>Tachymation Team</span>
           </div>
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4" />
@@ -104,7 +104,7 @@ const BlogPage = () => {
           <h2 id="tools" className="text-3xl font-bold text-white mt-16 mb-6 scroll-mt-32">Tools & Platforms Driving the Shift</h2>
           <p className="mb-6 leading-relaxed">You no longer need a massive engineering team to implement these systems. The ecosystem is heavily supported by robust platforms:</p>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-            {['Make & Zapier', 'OpenAI & Anthropic APIs', 'n8n', 'Aetomation'].map((tool) => (
+            {['Make & Zapier', 'OpenAI & Anthropic APIs', 'n8n', 'Tachymation'].map((tool) => (
               <div key={tool} className="p-4 rounded-xl bg-white/[0.02] border border-white/5 flex items-center justify-center text-center">
                 <span className="text-white font-medium">{tool}</span>
               </div>
@@ -200,7 +200,7 @@ const BlogPage = () => {
             <div className="mt-8 pt-8 border-t border-white/5">
               <p className="text-xs text-gray-400 mb-4">Want to automate your own workflows?</p>
               <a href="#" className="inline-flex items-center text-xs font-bold text-white hover:text-gray-300 transition-colors group">
-                Consult with Aetomation 
+                Consult with Tachymation 
                 <ArrowRight className="w-3 h-3 ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </div>
@@ -223,7 +223,7 @@ const BlogPage = () => {
             href="/" 
             className="inline-flex items-center justify-center px-10 py-4 rounded-full bg-white text-black font-bold tracking-widest uppercase text-xs hover:bg-white/90 transition-all hover:scale-105 active:scale-95 cursor-pointer relative z-10"
           >
-            Discover Aetomation
+            Discover Tachymation
           </a>
         </div>
       </section>

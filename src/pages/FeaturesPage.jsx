@@ -7,7 +7,7 @@ const features = [
     title: 'AI Build Engine',
     tagline: 'Websites deployed in minutes, not months.',
     description:
-      "Aetomation's AI Build Engine takes your brief — a doc, a Figma file, a voice note — and generates production-ready web platforms. Landing pages for fintech clients, e-commerce stores with 80+ products, real-time analytics dashboards — all built and deployed by AI automation tools.",
+      "Tachymation's AI Build Engine takes your brief — a doc, a Figma file, a voice note — and generates production-ready web platforms. Landing pages for fintech clients, e-commerce stores with 80+ products, real-time analytics dashboards — all built and deployed by AI automation tools.",
     capabilities: [
       'Production-grade code output',
       'Auto-deployment to CDN',
@@ -22,7 +22,7 @@ const features = [
     title: 'Workflow Automation Engine',
     tagline: 'Connect every tool. Automate every process.',
     description:
-      "Aetomation's workflow automation engine integrates your entire business stack — CRM, ERP, Slack, email, databases — into a single intelligent pipeline. We automate business processes including invoice reconciliation, data entry, report generation, lead routing, and customer onboarding. Zero human intervention required.",
+      "Tachymation's workflow automation engine integrates your entire business stack — CRM, ERP, Slack, email, databases — into a single intelligent pipeline. We automate business processes including invoice reconciliation, data entry, report generation, lead routing, and customer onboarding. Zero human intervention required.",
     capabilities: [
       'CRM → ERP → Slack sync',
       'Invoice & finance automation',
@@ -35,9 +35,9 @@ const features = [
   {
     id: 'enterprise-integration',
     title: 'Enterprise Integration Layer',
-    tagline: 'Legacy or modern — Aetomation connects everything.',
+    tagline: 'Legacy or modern — Tachymation connects everything.',
     description:
-      'For enterprise teams, Aetomation builds bespoke system integration layers that connect legacy infrastructure with modern cloud services. Our AI automation platform handles multi-system orchestration, compliance workflows, and real-time data pipelines without requiring you to rebuild your existing stack.',
+      'For enterprise teams, Tachymation builds bespoke system integration layers that connect legacy infrastructure with modern cloud services. Our AI automation platform handles multi-system orchestration, compliance workflows, and real-time data pipelines without requiring you to rebuild your existing stack.',
     capabilities: [
       'Legacy system bridging',
       'Cloud pipeline architecture',
@@ -52,7 +52,7 @@ const features = [
     title: 'Automation Intelligence',
     tagline: 'Your automation learns and improves over time.',
     description:
-      'Every Aetomation system includes built-in analytics and adaptive logic. The platform monitors automation performance, surfaces bottlenecks, and continuously optimises workflows. This is AI automation that gets smarter the longer it runs — turning your business processes into self-improving systems.',
+      'Every Tachymation system includes built-in analytics and adaptive logic. The platform monitors automation performance, surfaces bottlenecks, and continuously optimises workflows. This is AI automation that gets smarter the longer it runs — turning your business processes into self-improving systems.',
     capabilities: [
       'Real-time performance monitoring',
       'Bottleneck detection',
@@ -68,24 +68,24 @@ const FeaturesPage = () => {
   return (
     <>
       <Helmet>
-        <title>Aetomation Features - Automate Business Workflows with AI</title>
-        <meta name="description" content="Explore Aetomation's AI automation features: workflow automation engine, AI build engine for websites, enterprise integration, and adaptive automation intelligence. Automate your business processes today." />
-        <link rel="canonical" href="https://aetomation.vercel.app/features" />
-        <meta property="og:title" content="Aetomation Features - Automate Business Workflows with AI" />
-        <meta property="og:description" content="Explore Aetomation's AI automation features: workflow automation, AI web build engine, enterprise integration, and more." />
-        <meta property="og:url" content="https://aetomation.vercel.app/features" />
+        <title>Tachymation Features - Automate Business Workflows with AI</title>
+        <meta name="description" content="Explore Tachymation's AI automation features: workflow automation engine, AI build engine for websites, enterprise integration, and adaptive automation intelligence. Automate your business processes today." />
+        <link rel="canonical" href="https://tachymation.vercel.app/features" />
+        <meta property="og:title" content="Tachymation Features - Automate Business Workflows with AI" />
+        <meta property="og:description" content="Explore Tachymation's AI automation features: workflow automation, AI web build engine, enterprise integration, and more." />
+        <meta property="og:url" content="https://tachymation.vercel.app/features" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebPage",
-          "url": "https://aetomation.vercel.app/features",
-          "name": "Aetomation Features - Automate Business Workflows with AI",
-          "description": "Explore Aetomation's AI automation tools: workflow automation, AI web platforms, enterprise integration.",
-          "isPartOf": { "@id": "https://aetomation.vercel.app/#website" },
+          "url": "https://tachymation.vercel.app/features",
+          "name": "Tachymation Features - Automate Business Workflows with AI",
+          "description": "Explore Tachymation's AI automation tools: workflow automation, AI web platforms, enterprise integration.",
+          "isPartOf": { "@id": "https://tachymation.vercel.app/#website" },
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aetomation.vercel.app/" },
-              { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://aetomation.vercel.app/features" }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tachymation.vercel.app/" },
+              { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://tachymation.vercel.app/features" }
             ]
           }
         })}</script>
@@ -108,13 +108,13 @@ const FeaturesPage = () => {
             Platform Features
           </p>
           <h1 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6">
-            Everything Aetomation<br />
+            Everything Tachymation<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/30">
               automates for you.
             </span>
           </h1>
           <p className="text-lg text-gray-400 font-light leading-relaxed mb-16 max-w-2xl">
-            Aetomation is a full-spectrum AI automation platform. Every feature is designed to
+            Tachymation is a full-spectrum AI automation platform. Every feature is designed to
             eliminate a specific category of manual work — from building websites to orchestrating
             enterprise data pipelines.
           </p>
@@ -160,7 +160,7 @@ const FeaturesPage = () => {
           {/* Internal link CTAs */}
           <section className="mt-20 pt-12 border-t border-white/5">
             <h2 className="text-xl font-bold text-white mb-6">
-              See Aetomation's features in action
+              See Tachymation's features in action
             </h2>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -173,7 +173,7 @@ const FeaturesPage = () => {
                 to="/about"
                 className="inline-flex items-center gap-2 border border-white/20 text-white text-sm px-6 py-3 rounded-full hover:bg-white/5 transition-colors"
               >
-                About Aetomation →
+                About Tachymation →
               </Link>
               <Link
                 to="/contact"

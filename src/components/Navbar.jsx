@@ -76,10 +76,10 @@ const Navbar = () => {
     >
       <div className="flex items-center gap-8">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-2" aria-label="Aetomation home">
+        <Link to="/" className="flex items-center gap-2" aria-label="Tachymation home">
           <img
             src={eagleLogo}
-            alt="Aetomation — AI Automation Platform"
+            alt="Tachymation — AI Automation Platform"
             width="64"
             height="64"
             className="h-14 md:h-16 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]"

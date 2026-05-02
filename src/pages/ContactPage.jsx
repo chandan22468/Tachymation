@@ -39,24 +39,24 @@ const ContactPage = () => {
   return (
     <>
       <Helmet>
-        <title>Contact Aetomation - Get Started with AI Automation</title>
-        <meta name="description" content="Contact Aetomation to start automating your business workflows, build AI-powered web platforms, or integrate enterprise systems. First project free. No contract." />
-        <link rel="canonical" href="https://aetomation.vercel.app/contact" />
-        <meta property="og:title" content="Contact Aetomation - Get Started with AI Automation" />
-        <meta property="og:description" content="Contact Aetomation to automate your business. First project free. No setup fee. No contract." />
-        <meta property="og:url" content="https://aetomation.vercel.app/contact" />
+        <title>Contact Tachymation - Get Started with AI Automation</title>
+        <meta name="description" content="Contact Tachymation to start automating your business workflows, build AI-powered web platforms, or integrate enterprise systems. First project free. No contract." />
+        <link rel="canonical" href="https://tachymation.vercel.app/contact" />
+        <meta property="og:title" content="Contact Tachymation - Get Started with AI Automation" />
+        <meta property="og:description" content="Contact Tachymation to automate your business. First project free. No setup fee. No contract." />
+        <meta property="og:url" content="https://tachymation.vercel.app/contact" />
         <script type="application/ld+json">{JSON.stringify({
           "@context": "https://schema.org",
           "@type": "ContactPage",
-          "url": "https://aetomation.vercel.app/contact",
-          "name": "Contact Aetomation",
-          "description": "Contact Aetomation to start automating your business with AI automation tools.",
-          "isPartOf": { "@id": "https://aetomation.vercel.app/#website" },
+          "url": "https://tachymation.vercel.app/contact",
+          "name": "Contact Tachymation",
+          "description": "Contact Tachymation to start automating your business with AI automation tools.",
+          "isPartOf": { "@id": "https://tachymation.vercel.app/#website" },
           "breadcrumb": {
             "@type": "BreadcrumbList",
             "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://aetomation.vercel.app/" },
-              { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://aetomation.vercel.app/contact" }
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tachymation.vercel.app/" },
+              { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://tachymation.vercel.app/contact" }
             ]
           }
         })}</script>
@@ -87,7 +87,7 @@ const ContactPage = () => {
                 </span>
               </h1>
               <p className="text-gray-400 leading-relaxed mb-8">
-                Tell us what you need. <strong className="text-white font-medium">Aetomation</strong> will
+                Tell us what you need. <strong className="text-white font-medium">Tachymation</strong> will
                 design and deliver the right AI automation solution — whether that's a workflow
                 automation system, an AI-powered web platform, or full enterprise integration.
               </p>
@@ -135,7 +135,7 @@ const ContactPage = () => {
                   </div>
                   <h2 className="text-2xl font-bold text-white mb-3">Message received.</h2>
                   <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                    The Aetomation team will review your request and be in touch within one business day.
+                    The Tachymation team will review your request and be in touch within one business day.
                   </p>
                   <Link
                     to="/"
@@ -147,7 +147,7 @@ const ContactPage = () => {
               ) : (
                 <form
                   onSubmit={handleSubmit}
-                  aria-label="Contact Aetomation"
+                  aria-label="Contact Tachymation"
                   className="space-y-5 p-8 border border-white/5 rounded-3xl bg-white/[0.02]"
                 >
                   <div>
@@ -219,7 +219,7 @@ const ContactPage = () => {
                     disabled={status === 'loading'}
                     className="w-full bg-white text-black font-semibold text-sm px-6 py-4 rounded-full hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    {status === 'loading' ? 'Sending...' : 'Send to Aetomation →'}
+                    {status === 'loading' ? 'Sending...' : 'Send to Tachymation →'}
                   </button>
                   <p className="text-center text-xs text-white/25">
                     No spam. No sales calls. Just automation.

@@ -88,7 +88,7 @@ const Philosophy = () => {
         </h2>
 
         <p className="font-body text-text-secondary mb-4">
-          {wrapWords('aetomation gives you:')}
+          {wrapWords('tachymation gives you:')}
         </p>
 
         <h2 className="font-drama text-4xl md:text-6xl lg:text-8xl text-white mb-8">
