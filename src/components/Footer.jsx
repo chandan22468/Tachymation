@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Left: Logo & Tagline */}
           <div>
             <img
-              src="/src/assets/logo.png"
+              src="/src/assets/eagle.png"
               alt="aetomation"
               className="h-8 w-auto mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
             />

@@ -70,7 +70,7 @@ const Navbar = () => {
           className="flex items-center gap-2"
         >
           <img
-            src="/src/assets/logo.png"
+            src="/src/assets/eagle.png"
             alt="aetomation"
             className="h-14 md:h-16 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]"
           />

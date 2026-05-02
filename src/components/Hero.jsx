@@ -2,7 +2,7 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { ChevronDown } from 'lucide-react';
 import useMagneticButton from '../hooks/useMagneticButton';
-import eagleLogo from '../assets/eagle.png';
+import eagleLogo from '../assets/logo.png';
 
 /* ─────────────────────────────────────────────
    Magnetic Button
