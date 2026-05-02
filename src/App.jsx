@@ -1,17 +1,20 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense, lazy } from 'react';
 import useLenis from './hooks/useLenis';
 import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
-import SocialProof from './components/SocialProof';
-import Features from './components/Features';
-import HowItWorks from './components/HowItWorks';
-import Philosophy from './components/Philosophy';
-import Stats from './components/Stats';
-import Testimonials from './components/Testimonials';
-import FinalCTA from './components/FinalCTA';
-import Footer from './components/Footer';
+import WhatIsAetomation from './components/WhatIsAetomation';
+
+// Lazy Load heavy below-the-fold components
+const SocialProof = lazy(() => import('./components/SocialProof'));
+const Features = lazy(() => import('./components/Features'));
+const HowItWorks = lazy(() => import('./components/HowItWorks'));
+const Philosophy = lazy(() => import('./components/Philosophy'));
+const Stats = lazy(() => import('./components/Stats'));
+const Testimonials = lazy(() => import('./components/Testimonials'));
+const FinalCTA = lazy(() => import('./components/FinalCTA'));
+const Footer = lazy(() => import('./components/Footer'));
 
 function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -47,17 +50,24 @@ function App() {
       {/* Main Content */}
       <main>
         <Hero />
-        <SocialProof />
-        <Features />
-        <HowItWorks />
-        <Philosophy />
-        <Stats />
-        <Testimonials />
-        <FinalCTA />
+        <WhatIsAetomation />
+        
+        {/* Suspense Wrapper for heavy below-the-fold components */}
+        <Suspense fallback={<div className="h-32 bg-[#050505] w-full" />}>
+          <SocialProof />
+          <Features />
+          <HowItWorks />
+          <Philosophy />
+          <Stats />
+          <Testimonials />
+          <FinalCTA />
+        </Suspense>
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Suspense fallback={<div className="h-32 bg-[#050505] w-full" />}>
+        <Footer />
+      </Suspense>
     </div>
   );
 }
