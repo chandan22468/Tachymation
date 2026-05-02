@@ -26,23 +26,16 @@ function App() {
   // Handle loading completion
   const handleLoadingComplete = () => {
     setIsLoading(false);
-    setTimeout(() => setShowContent(true), 100);
+    setTimeout(() => setShowContent(true), 10);
   };
 
-  // Set body opacity after loading
-  useEffect(() => {
-    if (showContent) {
-      document.body.style.opacity = '1';
-    }
-  }, [showContent]);
-
   return (
-    <div className={`transition-opacity duration-300 ${showContent ? 'opacity-100' : 'opacity-0'}`}>
+    <div className="relative w-full overflow-x-hidden">
       {/* Loading Screen */}
       {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
 
-      {/* Custom Cursor */}
-      <CustomCursor />
+      {/* Custom Cursor - Only visible when content is ready */}
+      {showContent && <CustomCursor />}
 
       {/* Navigation */}
       <Navbar />

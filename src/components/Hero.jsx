@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 import * as THREE from 'three';
 import { ChevronDown } from 'lucide-react';
 import useMagneticButton from '../hooks/useMagneticButton';
-import eagleLogo from '../assets/hero.png';
 
 /* ─────────────────────────────────────────────
    Magnetic Button
@@ -175,8 +174,11 @@ const Hero = () => {
 
             {/* Eagle logo */}
             <img
-              src={eagleLogo}
+              src="/favicon.webp"
               alt="aetomation Eagle"
+              width="620"
+              height="620"
+              loading="eager"
               className="relative z-10 w-[200px] sm:w-[280px] md:w-[500px] lg:w-[620px] object-contain
                          transition-all duration-700 ease-out
                          group-hover:scale-[1.05] md:group-hover:scale-[1.1]
