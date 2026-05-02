@@ -42,6 +42,9 @@ const Hero = () => {
 
   /* Three.js particle field */
   useEffect(() => {
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) return;
+
     const canvas = canvasRef.current;
     if (!canvas) return;
 
@@ -92,6 +95,7 @@ const Hero = () => {
       camera.aspect = window.innerWidth / window.innerHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     };
 
     window.addEventListener('resize', handleResize);
@@ -100,6 +104,8 @@ const Hero = () => {
     return () => {
       window.removeEventListener('resize', handleResize);
       if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      particlesGeometry.dispose();
+      particlesMaterial.dispose();
       renderer.dispose();
     };
   }, []);
@@ -130,7 +136,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-8 text-gray-400 text-base md:text-lg max-w-[520px] leading-relaxed font-light">
-            AI automation that eliminates effort — from websites to enterprise systems.
+            AI automation that eliminates effort from websites to enterprise systems.
           </p>
 
           <div className="mt-10 flex justify-center md:justify-start">

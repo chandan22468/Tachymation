@@ -1,4 +1,5 @@
 import { Twitter, Linkedin, Github } from 'lucide-react';
+import eagleLogo from '../assets/eagle.png';
 
 const Footer = () => {
   const scrollToSection = (id) => {
@@ -16,9 +17,11 @@ const Footer = () => {
           {/* Left: Logo & Tagline */}
           <div>
             <img
-              src="/src/assets/eagle.png"
+              src={eagleLogo}
               alt="aetomation"
               className="h-8 w-auto mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
+              loading="lazy"
+              decoding="async"
             />
             <p className="font-body text-text-secondary text-sm">
               Eagle-like speed. Enterprise-grade output.
@@ -111,7 +114,7 @@ const Footer = () => {
 
           {/* Copyright */}
           <p className="font-body text-xs text-text-secondary">
-            © {new Date().getFullYear()} aetomation. All rights reserved.
+            © {new Date().getFullYear()} Aetomation. All rights reserved.
           </p>
         </div>
       </div>

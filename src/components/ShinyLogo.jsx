@@ -1,6 +1,7 @@
 import { useRef, useEffect } from 'react';
 import gsap from 'gsap';
 import useMagneticButton from '../hooks/useMagneticButton';
+import logoImage from '../assets/logo.png';
 
 const ShinyLogo = ({ className = "" }) => {
   const { buttonRef, handleMouseMove, handleMouseLeave } = useMagneticButton();
@@ -76,9 +77,11 @@ const ShinyLogo = ({ className = "" }) => {
         {/* Shine Overlay Container */}
         <div className="relative overflow-hidden rounded-2xl group">
           <img 
-            src="/src/assets/logo.png" 
+            src={logoImage}
             alt="aetomation Logo" 
             className="h-24 md:h-32 w-auto drop-shadow-[0_0_20px_rgba(255,255,255,0.4)] relative z-10"
+            loading="lazy"
+            decoding="async"
           />
           
           {/* Sweeping Shine */}

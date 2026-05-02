@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useMagneticButton from '../hooks/useMagneticButton';
+import eagleLogo from '../assets/eagle.png';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -70,9 +71,10 @@ const Navbar = () => {
           className="flex items-center gap-2"
         >
           <img
-            src="/src/assets/eagle.png"
+            src={eagleLogo}
             alt="aetomation"
             className="h-14 md:h-16 w-auto drop-shadow-[0_0_10px_rgba(255,255,255,0.4)]"
+            decoding="async"
           />
         </button>
 
