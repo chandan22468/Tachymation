@@ -2,15 +2,31 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
+const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID;
+
 const ContactPage = () => {
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
 
   const handleChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setSubmitted(true);
+    setStatus('loading');
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setStatus('success');
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
@@ -105,7 +121,7 @@ const ContactPage = () => {
 
             {/* Right — form */}
             <div>
-              {submitted ? (
+              {status === 'success' ? (
                 <div className="h-full flex flex-col items-center justify-center text-center p-10 border border-white/5 rounded-3xl bg-white/[0.02]">
                   <div className="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center mb-6">
                     <span className="text-white text-xl">✓</span>
@@ -186,11 +202,17 @@ const ContactPage = () => {
                       className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-sm text-white placeholder-white/20 focus:outline-none focus:border-white/30 transition-colors resize-none"
                     />
                   </div>
+                  {status === 'error' && (
+                    <p className="text-red-400 text-xs text-center">
+                      Something went wrong - please try again or email us directly.
+                    </p>
+                  )}
                   <button
                     type="submit"
-                    className="w-full bg-white text-black font-semibold text-sm px-6 py-4 rounded-full hover:bg-white/90 transition-colors"
+                    disabled={status === 'loading'}
+                    className="w-full bg-white text-black font-semibold text-sm px-6 py-4 rounded-full hover:bg-white/90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    Send to Aetomation →
+                    {status === 'loading' ? 'Sending...' : 'Send to Aetomation →'}
                   </button>
                   <p className="text-center text-xs text-white/25">
                     No spam. No sales calls. Just automation.
