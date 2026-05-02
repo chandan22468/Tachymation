@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import useMagneticButton from '../hooks/useMagneticButton';
@@ -22,6 +23,7 @@ const MagneticButton = ({ children, className, onClick }) => {
 };
 
 const FinalCTA = () => {
+  const navigate = useNavigate();
   const sectionRef = useRef(null);
   const contentRef = useRef(null);
 
@@ -74,7 +76,7 @@ const FinalCTA = () => {
 
         <MagneticButton
           className="bg-black text-white font-body font-medium text-base px-10 py-5 rounded-full hover:bg-black/90 transition-colors duration-300 mb-4"
-          onClick={() => alert('Thank you for your interest. Early access coming soon.')}
+          onClick={() => navigate('/contact')}
         >
           Request Early Access
         </MagneticButton>

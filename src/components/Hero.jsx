@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import * as THREE from 'three';
 import { ChevronDown } from 'lucide-react';
 import useMagneticButton from '../hooks/useMagneticButton';
@@ -36,6 +37,7 @@ const MagneticButton = ({
    Hero
 ───────────────────────────────────────────── */
 const Hero = () => {
+  const navigate = useNavigate();
   const canvasRef = useRef(null);
   const rafRef = useRef(null);
 
@@ -158,7 +160,10 @@ const Hero = () => {
           </p>
 
           <div className="mt-8 md:mt-10 flex justify-center md:justify-start">
-            <MagneticButton className="px-8 md:px-10 py-3 md:py-4 rounded-full text-[10px] md:text-xs uppercase tracking-[0.2em] w-full sm:w-auto">
+            <MagneticButton
+              className="px-8 md:px-10 py-3 md:py-4 rounded-full text-[10px] md:text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
+              onClick={() => navigate('/contact')}
+            >
               Get Early Access →
             </MagneticButton>
           </div>
