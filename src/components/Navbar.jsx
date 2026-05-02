@@ -43,7 +43,7 @@ const Navbar = () => {
     gsap.fromTo(
       navRef.current,
       { opacity: 0, y: -20 },
-      { opacity: 1, y: 0, duration: 1, delay: 1.5, ease: 'power3.out' }
+      { opacity: 1, y: 0, duration: 0.6, delay: 0.2, ease: 'power3.out' }
     );
   }, []);
 

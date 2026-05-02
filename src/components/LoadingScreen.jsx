@@ -21,7 +21,7 @@ const LoadingScreen = ({ onComplete }) => {
         onComplete: () => {
           gsap.to(overlayRef.current, {
             yPercent: -100,
-            duration: 0.8,
+            duration: 0.4,
             ease: 'power3.inOut',
             onComplete: () => {
               onComplete?.();
@@ -30,15 +30,15 @@ const LoadingScreen = ({ onComplete }) => {
         },
       });
 
-      tl.set(chars, { opacity: 0, y: 30 })
+      tl.set(chars, { opacity: 0, y: 15 })
         .to(chars, {
           opacity: 1,
           y: 0,
-          duration: 0.8,
-          stagger: 0.05,
+          duration: 0.4,
+          stagger: 0.02,
           ease: 'power3.out',
         })
-        .to({}, { duration: 0.3 });
+        .to({}, { duration: 0.1 });
     }, containerRef);
 
     return () => ctx.revert();
