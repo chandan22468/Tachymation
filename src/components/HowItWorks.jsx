@@ -86,6 +86,7 @@ const HowItWorks = () => {
     <section
       ref={sectionRef}
       id="how-it-works"
+      aria-label="How Aetomation AI Automation Works"
       className="w-full py-24 md:py-32 px-6 md:px-16 bg-black"
     >
       <div className="max-w-7xl mx-auto">

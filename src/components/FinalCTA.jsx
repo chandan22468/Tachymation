@@ -64,8 +64,12 @@ const FinalCTA = () => {
         <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-black mb-4">
           Stop building. Start shipping.
         </h2>
-        <p className="font-drama text-xl md:text-2xl lg:text-3xl text-black/60 mb-10">
+        <p className="font-drama text-xl md:text-2xl lg:text-3xl text-black/60 mb-4">
           Your next solution is already building.
+        </p>
+        <p className="font-body text-sm text-black/40 mb-10 max-w-lg mx-auto leading-relaxed">
+          Aetomation is the AI automation platform trusted by startups and enterprises to
+          automate business processes, deploy web platforms, and eliminate workflow bottlenecks — fast.
         </p>
 
         <MagneticButton

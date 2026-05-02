@@ -1,133 +1,103 @@
+import { Link } from 'react-router-dom';
 import { Twitter, Linkedin, Github } from 'lucide-react';
-import eagleLogo from '../assets/eagle.png';
+import eagleLogo from '../assets/eagle.webp';
 
-const Footer = ({ onNavigate }) => {
-  const scrollToSection = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
+const footerLinks = [
+  { to: '/',          label: 'Home'      },
+  { to: '/features',  label: 'Features'  },
+  { to: '/use-cases', label: 'Use Cases' },
+  { to: '/about',     label: 'About'     },
+  { to: '/blog',      label: 'Blog'      },
+  { to: '/contact',   label: 'Contact'   },
+];
 
+const Footer = () => {
   return (
     <footer className="w-full bg-black border-t border-[#222] rounded-t-[3.5rem] px-6 md:px-16 pt-16 pb-8">
       <div className="max-w-7xl mx-auto">
-        {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+
           {/* Left: Logo & Tagline */}
-          <div className="cursor-pointer" onClick={() => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-            if (onNavigate) onNavigate('home');
-          }}>
-            <img
-              src={eagleLogo}
-              alt="aetomation"
-              className="h-8 w-auto mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
-              loading="lazy"
-              decoding="async"
-            />
+          <div>
+            <Link to="/" aria-label="Aetomation home">
+              <img
+                src={eagleLogo}
+                alt="Aetomation — AI Automation Platform"
+                width="32"
+                height="32"
+                className="h-8 w-auto mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
+                loading="lazy"
+                decoding="async"
+              />
+            </Link>
             <p className="font-body text-text-secondary text-sm">
               Eagle-like speed. Enterprise-grade output.
             </p>
+            <p className="font-body text-text-secondary text-xs mt-2 max-w-[220px] leading-relaxed">
+              Aetomation is an AI automation platform for businesses and startups.
+            </p>
           </div>
 
-          {/* Center: Navigation */}
-          <div className="flex flex-wrap gap-6 md:justify-center">
-            <button
-              onClick={() => {
-                if (onNavigate) onNavigate('home');
-                setTimeout(() => scrollToSection('features'), 100);
-              }}
-              className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
-            >
-              Product
-            </button>
-            <button
-              onClick={() => {
-                if (onNavigate) onNavigate('home');
-                setTimeout(() => scrollToSection('philosophy'), 100);
-              }}
-              className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
-            >
-              Company
-            </button>
-            <button
-              onClick={() => {
-                if (onNavigate) onNavigate('home');
-                setTimeout(() => scrollToSection('how-it-works'), 100);
-              }}
-              className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
-            >
-              Use Cases
-            </button>
-            <button
-              onClick={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-                if (onNavigate) onNavigate('blog');
-              }}
-              className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
-            >
-              Blog
-            </button>
-          </div>
+          {/* Center: Crawlable navigation links */}
+          <nav aria-label="Footer navigation">
+            <p className="font-mono text-xs text-white/30 uppercase tracking-widest mb-4">Navigate</p>
+            <div className="flex flex-wrap gap-x-6 gap-y-3">
+              {footerLinks.map(({ to, label }) => (
+                <Link
+                  key={to}
+                  to={to}
+                  className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+          </nav>
 
-          {/* Right: Legal & Social */}
+          {/* Right: Social & Legal */}
           <div className="flex flex-col md:items-end gap-4">
             <div className="flex items-center gap-4">
               <a
-                href="https://twitter.com"
+                href="https://twitter.com/aetomation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="Twitter"
+                aria-label="Aetomation on Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com"
+                href="https://linkedin.com/company/aetomation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="LinkedIn"
+                aria-label="Aetomation on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com"
+                href="https://github.com/aetomation"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="GitHub"
+                aria-label="Aetomation on GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
             </div>
             <div className="flex gap-4">
-              <button
-                onClick={() => alert('Privacy Policy coming soon')}
-                className="font-body text-xs text-text-secondary hover:text-white transition-colors duration-300"
-              >
-                Privacy
-              </button>
-              <button
-                onClick={() => alert('Terms of Service coming soon')}
-                className="font-body text-xs text-text-secondary hover:text-white transition-colors duration-300"
-              >
-                Terms
-              </button>
+              <span className="font-body text-xs text-text-secondary/50">Privacy</span>
+              <span className="font-body text-xs text-text-secondary/50">Terms</span>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
-          {/* System Status */}
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
             <span className="font-mono text-xs text-green-500">System Operational</span>
           </div>
-
-          {/* Copyright */}
           <p className="font-body text-xs text-text-secondary">
             © {new Date().getFullYear()} Aetomation. All rights reserved.
           </p>

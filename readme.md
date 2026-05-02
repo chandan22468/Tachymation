@@ -1,6 +1,10 @@
 <div align="center">
-  <h1>✨ Aetomation</h1>
-  <p><strong>Next-Generation Interactive Web Experience</strong></p>
+  <h1>Aetomation — AI Automation Platform for Businesses & Startups</h1>
+  <p><strong>Automate workflows, websites, and enterprise systems with AI</strong></p>
+
+  <p>
+    <a href="https://aetomation.vercel.app" target="_blank"><strong>🌐 Live Site → aetomation.vercel.app</strong></a>
+  </p>
 
   <p>
     <img src="https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react" alt="React 19" />
@@ -13,11 +17,20 @@
 
 <br />
 
-## 🚀 About The Project
+## What is Aetomation?
 
-**Aetomation** is a highly interactive, performance-driven web application built with the latest React 19 and Vite workflows. Designed with a focus on immersive user experiences, it leverages cutting-edge animation libraries and smooth scrolling mechanics to deliver a polished, award-winning touch to the web.
+**[Aetomation](https://aetomation.vercel.app)** is an AI automation platform that helps businesses automate workflows, websites, and enterprise systems — 10x faster than traditional development.
 
-Whether it's custom cursor interactions, magnetic buttons, or premium 3D elements, Aetomation provides a modern template for a next-level digital presence.
+Unlike generic automation tools, Aetomation is a full-service AI automation platform. We design the automation logic, build the infrastructure, deploy it, and maintain it. Businesses that need to **automate business processes**, reduce operational overhead, or ship intelligent web platforms choose Aetomation.
+
+### What Aetomation automates
+
+- **Business workflow automation** — CRM sync, invoice reconciliation, report generation, lead routing
+- **AI-powered web platforms** — Landing pages, SaaS dashboards, e-commerce stores, deployed in minutes
+- **Enterprise system integration** — Legacy infrastructure, cloud pipelines, multi-system orchestration
+- **Data & compliance workflows** — Automated pipelines with zero human intervention
+
+> Aetomation clients save an average of **3,200+ hours per quarter** through intelligent AI automation tools.
 
 ## 🎯 Key Features
 
