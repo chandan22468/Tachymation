@@ -116,7 +116,7 @@ const BlogPage = () => {
           <ol className="mb-6 space-y-4 list-decimal pl-6 marker:text-white/50 text-gray-300">
             <li className="pl-2"><strong className="text-white">Trigger:</strong> A user submits a contact form on your website.</li>
             <li className="pl-2"><strong className="text-white">Action 1 (AI Analysis):</strong> The form data is sent to an LLM to extract the budget, industry, and urgency.</li>
-            <li className="pl-2"><strong className="text-white">Action 2 (Routing):</strong> A conditional path routes the data. If the budget is >$10k, it sends a Slack alert to the senior sales team.</li>
+            <li className="pl-2"><strong className="text-white">Action 2 (Routing):</strong> A conditional path routes the data. If the budget is $10k, it sends a Slack alert to the senior sales team.</li>
             <li className="pl-2"><strong className="text-white">Action 3 (CRM Entry):</strong> The formatted data is pushed cleanly into HubSpot or Salesforce.</li>
             <li className="pl-2"><strong className="text-white">Action 4 (Auto-Response):</strong> AI drafts and sends a personalized email directly to the prospect based on their needs.</li>
           </ol>
