@@ -163,6 +163,8 @@ const Hero = () => {
                          group-hover:scale-[1.1]
                          drop-shadow-[0_0_55px_rgba(255,255,255,0.30)]
                          group-hover:drop-shadow-[0_0_90px_rgba(255,255,255,0.50)]"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>
