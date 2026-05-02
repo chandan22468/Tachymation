@@ -2,7 +2,10 @@ import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
-const FORMSPREE_ID = import.meta.env.VITE_FORMSPREE_ID;
+const FORMSPREE_IDS = [
+  import.meta.env.VITE_FORMSPREE_ID,
+  import.meta.env.VITE_FORMSPREE_ID1,
+].filter(Boolean);
 
 const ContactPage = () => {
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
@@ -14,12 +17,16 @@ const ContactPage = () => {
     e.preventDefault();
     setStatus('loading');
     try {
-      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-        body: JSON.stringify(form),
-      });
-      if (res.ok) {
+      const results = await Promise.all(
+        FORMSPREE_IDS.map((id) =>
+          fetch(`https://formspree.io/f/${id}`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(form),
+          })
+        )
+      );
+      if (results.every((r) => r.ok)) {
         setStatus('success');
       } else {
         setStatus('error');
