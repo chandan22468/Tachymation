@@ -149,6 +149,7 @@ const Hero = () => {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[75px] font-black italic uppercase leading-[0.9] tracking-[-0.02em] text-white break-words w-full">
+            <span className="sr-only">Tachymation: </span>
             <span className="block">Move at the</span>
             <span className="block mt-1 md:mt-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">
               speed of thought.
@@ -156,7 +157,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-4 md:mt-8 text-gray-400 text-sm md:text-base lg:text-lg max-w-[520px] leading-relaxed font-light px-4 md:px-0">
-            AI automation that eliminates effort from websites to enterprise systems.
+            Advanced AI automation by <span className="text-white font-medium">Tachymation</span> that eliminates effort from websites to enterprise systems.
           </p>
 
           <div className="mt-8 md:mt-10 flex justify-center md:justify-start">
@@ -180,7 +181,7 @@ const Hero = () => {
             {/* Eagle logo */}
             <img
               src="/favicon.webp"
-              alt="tachymation Eagle"
+              alt="Tachymation AI Automation Logo - Intelligent Workflow Systems"
               width="620"
               height="620"
               loading="eager"
