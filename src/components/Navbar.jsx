@@ -110,6 +110,7 @@ const Navbar = () => {
           as={Link}
           to="/contact"
           className="bg-white text-black font-body text-sm font-medium px-5 py-2.5 rounded-full hover:bg-white/90 transition-colors duration-300"
+          aria-label="Contact us for early access"
         >
           Get Access
         </MagneticButton>

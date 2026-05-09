@@ -5,6 +5,7 @@ import useLenis from './hooks/useLenis';
 import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
+import ScrollToTop from './components/ScrollToTop';
 
 // Pages
 import HomePage from './pages/HomePage';
@@ -59,6 +60,7 @@ function App() {
   return (
     <HelmetProvider>
       <BrowserRouter>
+        <ScrollToTop />
         <AppShell />
       </BrowserRouter>
     </HelmetProvider>

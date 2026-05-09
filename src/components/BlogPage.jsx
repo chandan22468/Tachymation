@@ -1,5 +1,7 @@
 import React from 'react';
 import { Clock, Calendar, User, ArrowRight } from 'lucide-react';
+import SEO from './SEO';
+import { getBreadcrumbSchema } from '../utils/structuredData';
 
 const BlogPage = () => {
   const tableOfContents = [
@@ -14,9 +16,21 @@ const BlogPage = () => {
     { id: 'pros-cons', title: 'Pros & Cons' },
     { id: 'case-study', title: 'Mini Case Study' },
   ];
+  const breadcrumb = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Blog', path: '/blog' },
+  ]);
 
   return (
-    <div className="min-h-screen bg-[#050505] text-gray-300 font-sans selection:bg-white/30 selection:text-white pb-24">
+    <>
+      <SEO 
+        title="How AI Automation is Transforming Business Workflows"
+        description="Learn how AI automation integration is revolutionizing modern business workflows, reducing costs, and eliminating manual tasks. Explore real-world use cases and future trends."
+        canonical="/blog"
+        ogType="article"
+      />
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
+      <div className="min-h-screen bg-[#050505] text-gray-300 font-sans selection:bg-white/30 selection:text-white pb-24">
       
       {/* ── HERO SECTION ── */}
       <header className="relative w-full pt-32 pb-16 px-4 sm:px-8 md:px-16 max-w-[1200px] mx-auto border-b border-white/10">
@@ -229,6 +243,7 @@ const BlogPage = () => {
       </section>
 
     </div>
+    </>
   );
 };
 

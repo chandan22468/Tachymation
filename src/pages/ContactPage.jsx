@@ -1,6 +1,7 @@
 import { useState } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { getBreadcrumbSchema } from '../utils/structuredData';
 
 const FORMSPREE_IDS = [
   import.meta.env.VITE_FORMSPREE_ID,
@@ -10,6 +11,11 @@ const FORMSPREE_IDS = [
 const ContactPage = () => {
   const [form, setForm] = useState({ name: '', email: '', company: '', message: '' });
   const [status, setStatus] = useState('idle'); // 'idle' | 'loading' | 'success' | 'error'
+
+  const breadcrumb = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Contact', path: '/contact' },
+  ]);
 
   const handleChange = (e) => setForm((p) => ({ ...p, [e.target.name]: e.target.value }));
 
@@ -38,29 +44,12 @@ const ContactPage = () => {
 
   return (
     <>
-      <Helmet>
-        <title>Contact Tachymation - Get Started with AI Automation</title>
-        <meta name="description" content="Contact Tachymation to start automating your business workflows, build AI-powered web platforms, or integrate enterprise systems. First project free. No contract." />
-        <link rel="canonical" href="https://tachymation.vercel.app/contact" />
-        <meta property="og:title" content="Contact Tachymation - Get Started with AI Automation" />
-        <meta property="og:description" content="Contact Tachymation to automate your business. First project free. No setup fee. No contract." />
-        <meta property="og:url" content="https://tachymation.vercel.app/contact" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "ContactPage",
-          "url": "https://tachymation.vercel.app/contact",
-          "name": "Contact Tachymation",
-          "description": "Contact Tachymation to start automating your business with AI automation tools.",
-          "isPartOf": { "@id": "https://tachymation.vercel.app/#website" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tachymation.vercel.app/" },
-              { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://tachymation.vercel.app/contact" }
-            ]
-          }
-        })}</script>
-      </Helmet>
+      <SEO 
+        title="Contact Tachymation - Get Started with AI Automation"
+        description="Contact Tachymation to start automating your business workflows, build AI-powered web platforms, or integrate enterprise systems. First project free. No contract."
+        canonical="/contact"
+      />
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
 
       <main className="w-full bg-[#050505] text-white min-h-screen pt-32 pb-24 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">

@@ -183,7 +183,7 @@ const EfficiencySignalCard = () => {
       </h3>
       
       <div ref={svgRef} className="relative h-48">
-        <svg className="w-full h-full" viewBox="0 0 300 150" preserveAspectRatio="none">
+        <svg aria-hidden="true" className="w-full h-full" viewBox="0 0 300 150" preserveAspectRatio="none">
           {/* Grid lines */}
           {[0, 50, 100, 150].map((y) => (
             <line

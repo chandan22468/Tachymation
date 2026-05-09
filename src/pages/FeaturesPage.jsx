@@ -1,5 +1,6 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { getBreadcrumbSchema } from '../utils/structuredData';
 
 const features = [
   {
@@ -65,31 +66,19 @@ const features = [
 ];
 
 const FeaturesPage = () => {
+  const breadcrumb = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Features', path: '/features' },
+  ]);
+
   return (
     <>
-      <Helmet>
-        <title>Tachymation Features - Automate Business Workflows with AI</title>
-        <meta name="description" content="Explore Tachymation's AI automation features: workflow automation engine, AI build engine for websites, enterprise integration, and adaptive automation intelligence. Automate your business processes today." />
-        <link rel="canonical" href="https://tachymation.vercel.app/features" />
-        <meta property="og:title" content="Tachymation Features - Automate Business Workflows with AI" />
-        <meta property="og:description" content="Explore Tachymation's AI automation features: workflow automation, AI web build engine, enterprise integration, and more." />
-        <meta property="og:url" content="https://tachymation.vercel.app/features" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "url": "https://tachymation.vercel.app/features",
-          "name": "Tachymation Features - Automate Business Workflows with AI",
-          "description": "Explore Tachymation's AI automation tools: workflow automation, AI web platforms, enterprise integration.",
-          "isPartOf": { "@id": "https://tachymation.vercel.app/#website" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tachymation.vercel.app/" },
-              { "@type": "ListItem", "position": 2, "name": "Features", "item": "https://tachymation.vercel.app/features" }
-            ]
-          }
-        })}</script>
-      </Helmet>
+      <SEO 
+        title="Tachymation Features - Automate Business Workflows with AI"
+        description="Explore Tachymation's AI automation features: workflow automation engine, AI build engine for websites, enterprise integration, and adaptive automation intelligence. Automate your business processes today."
+        canonical="/features"
+      />
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
 
       <main className="w-full bg-[#050505] text-white min-h-screen pt-32 pb-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto">

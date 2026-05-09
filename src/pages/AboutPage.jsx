@@ -1,25 +1,21 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { getBreadcrumbSchema } from '../utils/structuredData';
 
 const AboutPage = () => {
+  const breadcrumb = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+  ]);
+
   return (
     <>
-      <Helmet>
-        <title>About Tachymation - AI Automation Company</title>
-        <meta name="description" content="Learn about Tachymation — the AI automation company built to eliminate manual business processes. Discover our mission, values, and how we deliver intelligent automation 10x faster." />
-        <link rel="canonical" href="https://tachymation.vercel.app/about" />
-        <meta property="og:title" content="About Tachymation - AI Automation Company" />
-        <meta property="og:description" content="Learn about Tachymation — the AI automation company built to eliminate manual business processes." />
-        <meta property="og:url" content="https://tachymation.vercel.app/about" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "AboutPage",
-          "url": "https://tachymation.vercel.app/about",
-          "name": "About Tachymation",
-          "description": "Tachymation is an AI automation company that helps businesses automate workflows, websites, and enterprise systems.",
-          "isPartOf": { "@id": "https://tachymation.vercel.app/#website" }
-        })}</script>
-      </Helmet>
+      <SEO 
+        title="About Tachymation - AI Automation Company"
+        description="Learn about Tachymation — the AI automation company built to eliminate manual business processes. Discover our mission, values, and how we deliver intelligent automation 10x faster."
+        canonical="/about"
+      />
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
 
       <main className="w-full bg-[#050505] text-white min-h-screen pt-32 pb-24 px-6 md:px-16">
         <div className="max-w-4xl mx-auto">

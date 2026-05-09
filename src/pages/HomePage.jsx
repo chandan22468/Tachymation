@@ -1,8 +1,9 @@
 import { Suspense, lazy } from 'react';
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
 import Hero from '../components/Hero';
 import WhatIsTachymation from '../components/WhatIsTachymation';
+import { getOrganizationSchema, getWebsiteSchema } from '../utils/structuredData';
 
 const UseCases = lazy(() => import('../components/UseCases'));
 const SocialProof = lazy(() => import('../components/SocialProof'));
@@ -18,12 +19,18 @@ const fallback = <div className="h-32 bg-[#050505] w-full" />;
 const HomePage = () => {
   return (
     <>
-      <Helmet>
-        <title>Tachymation - AI Automation Platform for Businesses &amp; Startups</title>
-        <meta name="description" content="Tachymation helps businesses automate workflows, websites, and enterprise systems using AI automation tools. Replace manual processes with intelligent automation — 10x faster delivery." />
-        <link rel="canonical" href="https://tachymation.vercel.app/" />
-        <meta property="og:url" content="https://tachymation.vercel.app/" />
-      </Helmet>
+      <SEO 
+        title="AI Automation Platform for Businesses & Startups"
+        description="Tachymation helps businesses automate workflows, websites, and enterprise systems using AI automation tools. Replace manual processes with intelligent automation — 10x faster delivery."
+        canonical="/"
+      />
+      
+      <script type="application/ld+json">
+        {JSON.stringify(getOrganizationSchema())}
+      </script>
+      <script type="application/ld+json">
+        {JSON.stringify(getWebsiteSchema())}
+      </script>
 
       <Hero />
       <WhatIsTachymation />

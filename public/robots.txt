@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
 
+# Sitemaps
 Sitemap: https://tachymation.vercel.app/sitemap.xml
+
+# Host
+Host: https://tachymation.vercel.app

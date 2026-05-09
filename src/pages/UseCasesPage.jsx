@@ -1,5 +1,6 @@
-import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
+import SEO from '../components/SEO';
+import { getBreadcrumbSchema } from '../utils/structuredData';
 
 const cases = [
   {
@@ -57,31 +58,19 @@ const cases = [
 ];
 
 const UseCasesPage = () => {
+  const breadcrumb = getBreadcrumbSchema([
+    { name: 'Home', path: '/' },
+    { name: 'Use Cases', path: '/use-cases' },
+  ]);
+
   return (
     <>
-      <Helmet>
-        <title>Tachymation Use Cases - AI Automation for Every Business</title>
-        <meta name="description" content="Discover how Tachymation's AI automation tools help businesses automate workflows, build web platforms, and integrate enterprise systems. Real use cases, real results." />
-        <link rel="canonical" href="https://tachymation.vercel.app/use-cases" />
-        <meta property="og:title" content="Tachymation Use Cases - AI Automation for Every Business" />
-        <meta property="og:description" content="Discover how Tachymation automates workflows, builds web platforms, and integrates enterprise systems. Real use cases across startups and enterprises." />
-        <meta property="og:url" content="https://tachymation.vercel.app/use-cases" />
-        <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebPage",
-          "url": "https://tachymation.vercel.app/use-cases",
-          "name": "Tachymation Use Cases - AI Automation for Every Business",
-          "description": "How Tachymation's AI automation tools help businesses automate workflows, build web platforms, and integrate enterprise systems.",
-          "isPartOf": { "@id": "https://tachymation.vercel.app/#website" },
-          "breadcrumb": {
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tachymation.vercel.app/" },
-              { "@type": "ListItem", "position": 2, "name": "Use Cases", "item": "https://tachymation.vercel.app/use-cases" }
-            ]
-          }
-        })}</script>
-      </Helmet>
+      <SEO 
+        title="Tachymation Use Cases - AI Automation for Every Business"
+        description="Discover how Tachymation's AI automation tools help businesses automate workflows, build web platforms, and integrate enterprise systems. Real use cases, real results."
+        canonical="/use-cases"
+      />
+      <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
 
       <main className="w-full bg-[#050505] text-white min-h-screen pt-32 pb-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto">

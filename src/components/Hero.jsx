@@ -136,6 +136,7 @@ const Hero = () => {
       {/* Background Canvas */}
       <canvas
         ref={canvasRef}
+        aria-hidden="true"
         className="absolute inset-0 z-0 pointer-events-none"
       />
 
@@ -164,6 +165,7 @@ const Hero = () => {
             <MagneticButton
               className="px-8 md:px-10 py-3 md:py-4 rounded-full text-[10px] md:text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
               onClick={() => navigate('/contact')}
+              aria-label="Get early access to Tachymation"
             >
               Get Early Access →
             </MagneticButton>
@@ -175,8 +177,8 @@ const Hero = () => {
           <div className="relative group w-full flex justify-center md:justify-end">
 
             {/* Ambient glow layers */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[600px] md:h-[600px] bg-white opacity-[0.09] blur-[130px] rounded-full pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.14]" />
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[400px] md:h-[400px] bg-white opacity-[0.06] blur-[80px] rounded-full pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.10]" />
+            <div aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[600px] md:h-[600px] bg-white opacity-[0.09] blur-[130px] rounded-full pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.14]" />
+            <div aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[400px] md:h-[400px] bg-white opacity-[0.06] blur-[80px] rounded-full pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.10]" />
 
             {/* Eagle logo */}
             <img
