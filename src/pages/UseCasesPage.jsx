@@ -72,29 +72,29 @@ const UseCasesPage = () => {
       />
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
 
-      <main className="w-full bg-bg-primary text-text-primary min-h-screen pt-32 pb-24 px-6 md:px-16">
+      <main className="w-full bg-black text-white min-h-screen pt-32 pb-24 px-6 md:px-16">
         <div className="max-w-5xl mx-auto">
 
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-12">
-            <ol className="flex items-center gap-2 text-xs text-text-primary/30 font-mono uppercase tracking-widest">
-              <li><Link to="/" className="hover:text-text-primary/60 transition-colors">Home</Link></li>
+            <ol className="flex items-center gap-2 text-xs text-white/30 font-mono uppercase tracking-widest">
+              <li><Link to="/" className="hover:text-white/60 transition-colors">Home</Link></li>
               <li>/</li>
-              <li className="text-text-primary/60">Use Cases</li>
+              <li className="text-white/60">Use Cases</li>
             </ol>
           </nav>
 
           {/* Hero */}
-          <p className="text-[10px] md:text-xs text-text-primary/40 tracking-[0.4em] uppercase font-semibold mb-4">
+          <p className="text-[10px] md:text-xs text-white/40 tracking-[0.4em] uppercase font-semibold mb-4">
             Use Cases
           </p>
-          <h1 className="text-4xl md:text-6xl font-black text-text-primary leading-tight tracking-tight mb-6">
+          <h1 className="text-4xl md:text-6xl font-black text-white leading-tight tracking-tight mb-6">
             What Iterate First automates<br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-white/30">
               for your business.
             </span>
           </h1>
-          <p className="text-lg text-text-secondary font-light leading-relaxed mb-16 max-w-2xl">
+          <p className="text-lg text-[#a1a1aa] font-light leading-relaxed mb-16 max-w-2xl">
             From solo founders to enterprise teams — Iterate First is the AI automation platform
             that replaces repetitive work across every layer of your business. These are the
             real ways businesses use Iterate First's AI automation tools to move faster and operate
@@ -105,20 +105,20 @@ const UseCasesPage = () => {
           <div className="space-y-20">
             {cases.map((c) => (
               <section key={c.id} id={c.id} aria-labelledby={`${c.id}-heading`}>
-                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start p-8 md:p-10 border border-border rounded-lg bg-white/[0.02]">
+                <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 items-start p-8 md:p-10 border border-white/10 rounded-lg bg-white/[0.02]">
                   <div>
-                    <p className="text-[10px] text-text-primary/30 tracking-[0.35em] uppercase font-semibold mb-3">
+                    <p className="text-[10px] text-white/30 tracking-[0.35em] uppercase font-semibold mb-3">
                       {c.industry}
                     </p>
-                    <h2 id={`${c.id}-heading`} className="text-2xl md:text-3xl font-bold text-text-primary mb-4 leading-snug">
+                    <h2 id={`${c.id}-heading`} className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug">
                       {c.heading}
                     </h2>
-                    <p className="text-base text-text-secondary leading-relaxed mb-6 max-w-xl">
+                    <p className="text-base text-[#a1a1aa] leading-relaxed mb-6 max-w-xl">
                       {c.body}
                     </p>
                     <ul className="space-y-2">
                       {c.examples.map((ex) => (
-                        <li key={ex} className="flex items-start gap-3 text-sm text-text-secondary">
+                        <li key={ex} className="flex items-start gap-3 text-sm text-[#a1a1aa]">
                           <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-border0 shrink-0" />
                           {ex}
                         </li>
@@ -126,10 +126,10 @@ const UseCasesPage = () => {
                     </ul>
                   </div>
                   <div className="flex flex-row md:flex-col items-center md:items-end justify-start md:justify-center gap-2 md:gap-1 shrink-0 md:pt-4">
-                    <span className="text-4xl md:text-5xl font-black text-text-primary tabular-nums leading-none">
+                    <span className="text-4xl md:text-5xl font-black text-white tabular-nums leading-none">
                       {c.stat}
                     </span>
-                    <span className="text-xs text-text-primary/40 md:text-right leading-tight max-w-[120px]">
+                    <span className="text-xs text-white/40 md:text-right leading-tight max-w-[120px]">
                       {c.statLabel}
                     </span>
                   </div>
@@ -139,11 +139,11 @@ const UseCasesPage = () => {
           </div>
 
           {/* Brand summary */}
-          <div className="mt-16 p-8 md:p-10 rounded-lg border border-border bg-white/[0.02] text-center">
-            <h2 className="text-xl md:text-2xl font-bold text-text-primary mb-3">
+          <div className="mt-16 p-8 md:p-10 rounded-lg border border-white/10 bg-white/[0.02] text-center">
+            <h2 className="text-xl md:text-2xl font-bold text-white mb-3">
               Iterate First is an AI automation platform — not just a tool
             </h2>
-            <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
+            <p className="text-[#a1a1aa] text-sm md:text-base max-w-2xl mx-auto leading-relaxed mb-8">
               Unlike no-code workflow builders or generic automation tools, Iterate First handles
               the full lifecycle: designing the automation logic, building the infrastructure,
               deploying it, and maintaining it. When businesses need to automate business
@@ -158,7 +158,7 @@ const UseCasesPage = () => {
               </Link>
               <Link
                 to="/contact"
-                className="inline-flex items-center gap-2 border border-border text-text-primary text-sm px-6 py-3 rounded-full hover:bg-border transition-colors"
+                className="inline-flex items-center gap-2 border border-white/10 text-white text-sm px-6 py-3 rounded-full hover:bg-border transition-colors"
               >
                 Get Early Access →
               </Link>

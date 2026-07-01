@@ -33,7 +33,7 @@ const Footer = () => {
             <p className="font-body text-text-secondary text-sm">
               Eagle-like speed. Enterprise-grade output.
             </p>
-            <p className="font-body text-text-secondary text-xs mt-2 max-w-[220px] leading-relaxed">
+            <p className="font-body text-white text-xs mt-2 max-w-[220px] leading-relaxed">
               Iterate First is an AI automation platform for businesses and startups.
             </p>
           </div>

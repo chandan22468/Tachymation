@@ -146,7 +146,7 @@ const Hero = () => {
         {/* ── LEFT TEXT ── */}
         <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left max-w-[640px] mx-auto md:mx-0">
           <p className="tracking-[0.45em] text-[10px] md:text-xs text-white/70 mb-4 md:mb-6 uppercase font-mono">
-            <span className="text-vercel-cyan font-bold drop-shadow-[0_0_8px_rgba(80,227,194,0.6)]">iteratefirst</span> SYSTEM
+            <span className="text-white font-bold drop-shadow-[0_0_8px_rgba(255,255,255,0.4)]">iteratefirst</span> SYSTEM
           </p>
 
           <h1 className="font-space-grotesk uppercase leading-none tracking-[-0.03em] w-full flex flex-col items-center md:items-start select-none">
@@ -166,7 +166,7 @@ const Hero = () => {
           </h1>
 
           <p className="mt-4 md:mt-8 text-gray-400 text-sm md:text-base lg:text-lg max-w-[520px] leading-relaxed font-light px-4 md:px-0">
-            Advanced AI automation by <span className="text-vercel-cyan font-bold">Iterate First</span> that eliminates effort from websites to enterprise systems.
+            Advanced AI automation by <span className="text-white font-bold">Iterate First</span> that eliminates effort from websites to enterprise systems.
           </p>
 
           <div className="mt-8 md:mt-10 flex justify-center md:justify-start">

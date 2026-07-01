@@ -87,12 +87,12 @@ const HowItWorks = () => {
       ref={sectionRef}
       id="how-it-works"
       aria-label="How Iterate First AI Automation Works"
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-bg-secondary"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-[#121212]"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 md:mb-20 text-center">
-          <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-text-primary mb-4">
+          <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-white mb-4">
             Three steps. No learning curve.
           </h2>
         </div>
@@ -133,17 +133,17 @@ const HowItWorks = () => {
                 </span>
 
                 {/* Card Context */}
-                <div className="relative z-10 bg-bg-secondary/80 backdrop-blur-xl rounded-lg p-8 md:p-10 border border-border shadow-sm
-                                transition-all duration-500 hover:bg-bg-primary/90 hover:-translate-y-1">
+                <div className="relative z-10 bg-[#121212]/80 backdrop-blur-xl rounded-lg p-8 md:p-10 border border-white/10 shadow-sm
+                                transition-all duration-500 hover:bg-black/90 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-6">
                     <span className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-mono text-sm font-bold shadow-sm">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-space-grotesk font-bold text-xl md:text-2xl text-text-primary mb-4">
+                  <h3 className="font-space-grotesk font-bold text-xl md:text-2xl text-white mb-4">
                     {step.title}
                   </h3>
-                  <p className="font-body text-text-secondary leading-relaxed text-sm md:text-base">
+                  <p className="font-body text-[#a1a1aa] leading-relaxed text-sm md:text-base">
                     {step.description}
                   </p>
                 </div>

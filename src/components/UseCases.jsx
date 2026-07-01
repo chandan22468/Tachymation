@@ -32,17 +32,17 @@ const UseCases = () => {
     <section
       id="use-cases"
       aria-label="Iterate First Use Cases"
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-bg-secondary border-t border-border"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-[#121212] border-t border-white/10"
     >
       <div className="max-w-7xl mx-auto">
         <header className="mb-16 md:mb-20 max-w-3xl">
-          <p className="text-[10px] md:text-xs text-text-secondary/60 tracking-[0.4em] uppercase font-mono mb-4">
+          <p className="text-[10px] md:text-xs text-[#a1a1aa]/60 tracking-[0.4em] uppercase font-mono mb-4">
             Use Cases
           </p>
-          <h2 className="text-3xl md:text-5xl font-bold text-text-primary leading-tight tracking-tight mb-6 font-space-grotesk">
+          <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight tracking-tight mb-6 font-space-grotesk">
             What Iterate First automates for your business
           </h2>
-          <p className="text-lg text-text-secondary font-light leading-relaxed">
+          <p className="text-lg text-[#a1a1aa] font-light leading-relaxed">
             From solo founders to enterprise teams — Iterate First is the AI automation platform that replaces
             repetitive work across every layer of your business. Explore how businesses use our
             AI automation tools to move faster.
@@ -53,17 +53,17 @@ const UseCases = () => {
           {useCases.map((uc, index) => (
             <article
               key={index}
-              className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 p-8 md:p-10 border border-border rounded-lg bg-bg-secondary hover:bg-bg-primary/40 shadow-sm transition-all duration-300"
+              className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 p-8 md:p-10 border border-white/10 rounded-lg bg-[#121212] hover:bg-black/40 shadow-sm transition-all duration-300"
             >
               <div className="flex flex-col justify-between gap-6">
                 <div>
-                  <p className="text-[10px] text-text-secondary/50 tracking-[0.35em] uppercase font-mono mb-3">
+                  <p className="text-[10px] text-[#a1a1aa]/50 tracking-[0.35em] uppercase font-mono mb-3">
                     {uc.category}
                   </p>
-                  <h3 className="text-2xl md:text-3xl font-bold text-text-primary mb-4 leading-snug font-space-grotesk">
+                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4 leading-snug font-space-grotesk">
                     {uc.heading}
                   </h3>
-                  <p className="text-sm md:text-base text-text-secondary leading-relaxed max-w-2xl">
+                  <p className="text-sm md:text-base text-[#a1a1aa] leading-relaxed max-w-2xl">
                     {uc.body}
                   </p>
                 </div>
@@ -71,7 +71,7 @@ const UseCases = () => {
                   {uc.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs text-text-secondary border border-border rounded-full px-3 py-1 bg-bg-primary/50"
+                      className="text-xs text-[#a1a1aa] border border-white/10 rounded-full px-3 py-1 bg-black/50"
                     >
                       {tag}
                     </span>
@@ -80,10 +80,10 @@ const UseCases = () => {
               </div>
 
               <div className="flex flex-row md:flex-col items-center md:items-end justify-start md:justify-center gap-2 md:gap-1 shrink-0">
-                <span className="text-4xl md:text-5xl font-bold text-text-primary tabular-nums leading-none font-space-grotesk">
+                <span className="text-4xl md:text-5xl font-bold text-white tabular-nums leading-none font-space-grotesk">
                   {uc.stat}
                 </span>
-                <span className="text-xs text-text-secondary/60 md:text-right leading-tight max-w-[120px]">
+                <span className="text-xs text-[#a1a1aa]/60 md:text-right leading-tight max-w-[120px]">
                   {uc.statLabel}
                 </span>
               </div>
@@ -91,11 +91,11 @@ const UseCases = () => {
           ))}
         </div>
 
-        <div className="mt-16 p-8 md:p-10 rounded-lg border border-border bg-bg-primary text-center shadow-sm">
-          <h3 className="text-xl md:text-2xl font-bold text-text-primary mb-3 font-space-grotesk">
+        <div className="mt-16 p-8 md:p-10 rounded-lg border border-white/10 bg-black text-center shadow-sm">
+          <h3 className="text-xl md:text-2xl font-bold text-white mb-3 font-space-grotesk">
             Iterate First is an AI automation platform — not just a tool
           </h3>
-          <p className="text-text-secondary text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
+          <p className="text-[#a1a1aa] text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
             Unlike no-code workflow builders or generic automation tools, Iterate First is a full-service
             AI automation platform. We handle the full lifecycle: designing the automation logic,
             building the infrastructure, deploying it, and maintaining it. When businesses need to

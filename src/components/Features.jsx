@@ -34,15 +34,15 @@ const BuildEngineCard = () => {
   return (
     <div
       ref={cardRef}
-      className="bg-bg-secondary border border-border rounded-lg p-6 md:p-8 h-full shadow-sm hover:shadow-md transition-all duration-300"
+      className="bg-[#121212] border border-white/10 rounded-lg p-6 md:p-8 h-full shadow-sm hover:shadow-md transition-all duration-300"
       style={{ perspective: '800px', transformStyle: 'preserve-3d' }}
     >
-      <h3 className="font-space-grotesk font-semibold text-xl md:text-2xl text-text-primary mb-6">
+      <h3 className="font-space-grotesk font-semibold text-xl md:text-2xl text-white mb-6">
         Websites. Built. Instantly.
       </h3>
       
       <div className="space-y-3">
-        <div className="flex justify-between text-sm font-mono text-text-secondary/60 pb-2 border-b border-border">
+        <div className="flex justify-between text-sm font-mono text-[#a1a1aa]/60 pb-2 border-b border-white/10">
           <span>Task</span>
           <span>Status</span>
         </div>
@@ -54,8 +54,8 @@ const BuildEngineCard = () => {
                 index === currentIndex ? 'opacity-100' : 'opacity-40'
               }`}
             >
-              <span className="font-body text-text-primary">{build.task}</span>
-              <span className="font-mono text-text-primary font-medium">✓ {build.status}</span>
+              <span className="font-body text-white">{build.task}</span>
+              <span className="font-mono text-white font-medium">✓ {build.status}</span>
             </div>
           ))}
         </div>
@@ -177,8 +177,8 @@ const EfficiencySignalCard = () => {
   ];
 
   return (
-    <div className="bg-bg-secondary border border-border rounded-lg p-6 md:p-8 h-full shadow-sm hover:shadow-md transition-all duration-300">
-      <h3 className="font-space-grotesk font-semibold text-xl md:text-2xl text-text-primary mb-6">
+    <div className="bg-[#121212] border border-white/10 rounded-lg p-6 md:p-8 h-full shadow-sm hover:shadow-md transition-all duration-300">
+      <h3 className="font-space-grotesk font-semibold text-xl md:text-2xl text-white mb-6">
         Hours saved. Measured.
       </h3>
       
@@ -222,16 +222,16 @@ const EfficiencySignalCard = () => {
         </svg>
         
         {/* Labels */}
-        <div className="flex justify-between text-xs font-mono text-text-secondary mt-2">
+        <div className="flex justify-between text-xs font-mono text-[#a1a1aa] mt-2">
           <span>Week 1</span>
           <span>Week 6</span>
           <span>Week 12</span>
         </div>
       </div>
       
-      <div className="flex justify-between items-center mt-4 pt-4 border-t border-border">
-        <span className="font-mono text-sm text-text-secondary">Hours Saved / Week</span>
-        <span className="font-mono text-lg text-text-primary font-semibold">340 hrs</span>
+      <div className="flex justify-between items-center mt-4 pt-4 border-t border-white/10">
+        <span className="font-mono text-sm text-[#a1a1aa]">Hours Saved / Week</span>
+        <span className="font-mono text-lg text-white font-semibold">340 hrs</span>
       </div>
     </div>
   );
@@ -275,15 +275,15 @@ const Features = () => {
       ref={sectionRef}
       id="features"
       aria-label="Iterate First AI Automation Features"
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-bg-primary border-t border-border"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-black border-t border-white/10"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 md:mb-20">
-          <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-text-primary mb-4">
+          <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-white mb-4">
             What we eliminate.
           </h2>
-          <p className="font-body text-lg text-text-secondary max-w-xl">
+          <p className="font-body text-lg text-[#a1a1aa] max-w-xl">
             Every feature exists because someone's team was wasting time on it.
           </p>
         </div>

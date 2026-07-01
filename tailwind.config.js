@@ -7,16 +7,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bg-primary': '#FAFAFA',      // Canvas Soft
-        'bg-secondary': '#FFFFFF',    // Canvas
-        'text-primary': '#171717',    // Ink
-        'text-secondary': '#4D4D4D',  // Body
-        'accent': '#171717',          // Ink
-        'accent-soft': '#F5F5F5',     // Canvas Soft 2
+        'bg-primary': '#000000',      // Pure Black Canvas
+        'bg-secondary': '#121212',    // Dark Grey Card
+        'text-primary': '#FFFFFF',    // White text
+        'text-secondary': '#a1a1aa',  // Off-white / light-grey body
+        'accent': '#FFFFFF',          // Accent color
+        'accent-soft': '#1c1c1c',     // Dark accent soft
         'dark-panel': '#000000',
-        'gold': '#0070F3',            // Blue accent link
-        'tint': '#FAFAFA',
-        'border': '#EBEBEB',          // Hairline
+        'gold': '#0070F3',            // Blue link accent
+        'tint': '#121212',
+        'border': '#222222',          // Subtle border (border-white/10 equivalent)
         'vercel-cyan': '#50E3C2',
         'vercel-pink': '#FF0080',
         'vercel-violet': '#7928CA',

@@ -93,34 +93,34 @@ const Testimonials = () => {
     <section
       ref={sectionRef}
       id="testimonials"
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-bg-secondary"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-[#121212]"
     >
       <div className="max-w-4xl mx-auto">
         {/* Header */}
-        <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-text-primary text-center mb-16">
+        <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-white text-center mb-16">
           The Human Evidence
         </h2>
 
         {/* Testimonial Card */}
-        <div className="relative bg-bg-secondary rounded-lg p-8 md:p-12 border border-border shadow-sm">
+        <div className="relative bg-[#121212] rounded-lg p-8 md:p-12 border border-white/10 shadow-sm">
           {/* Quote Mark */}
-          <span className="absolute top-6 left-8 font-drama text-6xl md:text-8xl text-text-primary/30 leading-none">
+          <span className="absolute top-6 left-8 font-drama text-6xl md:text-8xl text-white/30 leading-none">
             "
           </span>
 
           <div ref={quoteRef} className="relative z-10">
             {/* Quote */}
-            <blockquote className="font-body text-xl md:text-2xl text-text-primary leading-relaxed mb-8 pl-8 md:pl-12">
+            <blockquote className="font-body text-xl md:text-2xl text-white leading-relaxed mb-8 pl-8 md:pl-12">
               {current.quote}
             </blockquote>
 
             {/* Author */}
             <div className="flex items-center justify-between pl-8 md:pl-12">
               <div>
-                <p className="font-space-grotesk font-bold text-lg text-text-primary">
+                <p className="font-space-grotesk font-bold text-lg text-white">
                   — {current.author}
                 </p>
-                <p className="font-body text-sm text-text-primary/50">
+                <p className="font-body text-sm text-white/50">
                   {current.role}, {current.location}
                 </p>
               </div>
@@ -130,7 +130,7 @@ const Testimonials = () => {
                 <button
                   onClick={() => navigate('prev')}
                   disabled={isAnimating}
-                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-text-primary/50 hover:text-text-primary hover:border-text-primary transition-colors duration-300 disabled:opacity-50"
+                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-text-primary transition-colors duration-300 disabled:opacity-50"
                   aria-label="Previous testimonial"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -138,7 +138,7 @@ const Testimonials = () => {
                 <button
                   onClick={() => navigate('next')}
                   disabled={isAnimating}
-                  className="w-10 h-10 rounded-full border border-border flex items-center justify-center text-text-primary/50 hover:text-text-primary hover:border-text-primary transition-colors duration-300 disabled:opacity-50"
+                  className="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center text-white/50 hover:text-white hover:border-text-primary transition-colors duration-300 disabled:opacity-50"
                   aria-label="Next testimonial"
                 >
                   <ChevronRight className="w-5 h-5" />

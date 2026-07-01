@@ -56,32 +56,32 @@ const FinalCTA = () => {
     <section
       ref={sectionRef}
       id="cta"
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-white"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-black border-t border-white/10"
     >
       <div
         ref={contentRef}
         className="max-w-4xl mx-auto text-center"
         style={{ opacity: 0 }}
       >
-        <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl lg:text-6xl text-text-primary mb-4">
+        <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl lg:text-6xl text-white mb-4">
           Stop building. Start shipping.
         </h2>
-        <p className="font-drama text-xl md:text-2xl lg:text-3xl text-text-secondary mb-4">
+        <p className="font-drama text-xl md:text-2xl lg:text-3xl text-[#a1a1aa] mb-4">
           Your next solution is already building.
         </p>
-        <p className="font-body text-sm text-text-secondary/60 mb-10 max-w-lg mx-auto leading-relaxed">
+        <p className="font-body text-sm text-[#a1a1aa]/60 mb-10 max-w-lg mx-auto leading-relaxed">
           Iterate First is the AI automation platform trusted by startups and enterprises to
           automate business processes, deploy web platforms, and eliminate workflow bottlenecks — fast.
         </p>
 
         <MagneticButton
-          className="bg-accent text-white font-body font-semibold text-base px-10 py-5 rounded-full hover:bg-black/90 transition-colors duration-300 mb-4"
+          className="bg-white text-black font-body font-semibold text-base px-10 py-5 rounded-full hover:bg-white/90 transition-colors duration-300 mb-4"
           onClick={() => navigate('/contact')}
         >
           Request Early Access
         </MagneticButton>
 
-        <p className="font-mono text-xs text-text-secondary/50">
+        <p className="font-mono text-xs text-[#a1a1aa]/50">
           No contract. No setup fee. First project on us.
         </p>
       </div>

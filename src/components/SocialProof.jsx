@@ -47,7 +47,7 @@ const SocialProof = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-8 bg-bg-primary border-y border-border overflow-hidden"
+      className="w-full py-8 bg-black border-y border-white/10 overflow-hidden"
     >
       {/* Clients Row */}
       <div className="relative mb-6">
@@ -58,7 +58,7 @@ const SocialProof = () => {
           {[...clients, ...clients].map((client, index) => (
             <span
               key={index}
-              className="font-mono text-sm text-text-secondary uppercase tracking-wider whitespace-nowrap px-8"
+              className="font-mono text-sm text-[#a1a1aa] uppercase tracking-wider whitespace-nowrap px-8"
             >
               {client}
             </span>
@@ -75,7 +75,7 @@ const SocialProof = () => {
           {[...stats, ...stats].map((stat, index) => (
             <span
               key={index}
-              className="font-mono text-sm text-text-primary whitespace-nowrap px-8 flex items-center gap-2"
+              className="font-mono text-sm text-white whitespace-nowrap px-8 flex items-center gap-2"
             >
               <span className="w-1 h-1 rounded-full bg-text-primary" />
               {stat}

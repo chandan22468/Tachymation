@@ -51,32 +51,32 @@ const ContactPage = () => {
       />
       <script type="application/ld+json">{JSON.stringify(breadcrumb)}</script>
 
-      <main className="w-full bg-bg-primary text-text-primary min-h-screen pt-32 pb-24 px-6 md:px-16 border-t border-border">
+      <main className="w-full bg-black text-white min-h-screen pt-32 pb-24 px-6 md:px-16 border-t border-white/10">
         <div className="max-w-4xl mx-auto">
 
           {/* Breadcrumb */}
           <nav aria-label="Breadcrumb" className="mb-12">
-            <ol className="flex items-center gap-2 text-xs text-text-secondary/50 font-mono uppercase tracking-widest">
-              <li><Link to="/" className="hover:text-text-primary/60 transition-colors">Home</Link></li>
+            <ol className="flex items-center gap-2 text-xs text-[#a1a1aa]/50 font-mono uppercase tracking-widest">
+              <li><Link to="/" className="hover:text-white/60 transition-colors">Home</Link></li>
               <li>/</li>
-              <li className="text-text-primary/60">Contact</li>
+              <li className="text-white/60">Contact</li>
             </ol>
           </nav>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
             {/* Left — copy */}
             <div>
-              <p className="text-[10px] md:text-xs text-text-secondary/60 tracking-[0.4em] uppercase font-mono mb-4">
+              <p className="text-[10px] md:text-xs text-[#a1a1aa]/60 tracking-[0.4em] uppercase font-mono mb-4">
                 Get in Touch
               </p>
-              <h1 className="text-4xl md:text-5xl font-black text-text-primary leading-tight tracking-tight mb-6 font-space-grotesk">
+              <h1 className="text-4xl md:text-5xl font-black text-white leading-tight tracking-tight mb-6 font-space-grotesk">
                 Start automating<br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-text-primary to-text-primary/50">
                   your business today.
                 </span>
               </h1>
-              <p className="text-text-secondary leading-relaxed mb-8">
-                Tell us what you need. <strong className="text-text-primary font-medium">Iterate First</strong> will
+              <p className="text-[#a1a1aa] leading-relaxed mb-8">
+                Tell us what you need. <strong className="text-white font-medium">Iterate First</strong> will
                 design and deliver the right AI automation solution — whether that's a workflow
                 automation system, an AI-powered web platform, or full enterprise integration.
               </p>
@@ -88,27 +88,27 @@ const ContactPage = () => {
                   { label: 'First project free', detail: 'See results before you commit.' },
                 ].map((item) => (
                   <div key={item.label} className="flex items-start gap-3">
-                    <span className="mt-1 w-4 h-4 rounded-full bg-bg-secondary border border-border flex items-center justify-center shrink-0">
+                    <span className="mt-1 w-4 h-4 rounded-full bg-[#121212] border border-white/10 flex items-center justify-center shrink-0">
                       <span className="w-1.5 h-1.5 rounded-full bg-text-primary" />
                     </span>
                     <div>
-                      <p className="text-sm font-semibold text-text-primary">{item.label}</p>
-                      <p className="text-xs text-text-secondary">{item.detail}</p>
+                      <p className="text-sm font-semibold text-white">{item.label}</p>
+                      <p className="text-xs text-[#a1a1aa]">{item.detail}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="pt-6 border-t border-border space-y-2">
-                <p className="text-xs text-text-secondary/50 uppercase tracking-widest font-mono">Explore first</p>
+              <div className="pt-6 border-t border-white/10 space-y-2">
+                <p className="text-xs text-[#a1a1aa]/50 uppercase tracking-widest font-mono">Explore first</p>
                 <div className="flex flex-wrap gap-3 mt-2">
-                  <Link to="/features" className="text-sm text-text-secondary hover:text-text-primary underline underline-offset-4 transition-colors">
+                  <Link to="/features" className="text-sm text-[#a1a1aa] hover:text-white underline underline-offset-4 transition-colors">
                     Features
                   </Link>
-                  <Link to="/use-cases" className="text-sm text-text-secondary hover:text-text-primary underline underline-offset-4 transition-colors">
+                  <Link to="/use-cases" className="text-sm text-[#a1a1aa] hover:text-white underline underline-offset-4 transition-colors">
                     Use Cases
                   </Link>
-                  <Link to="/about" className="text-sm text-text-secondary hover:text-text-primary underline underline-offset-4 transition-colors">
+                  <Link to="/about" className="text-sm text-[#a1a1aa] hover:text-white underline underline-offset-4 transition-colors">
                     About Us
                   </Link>
                 </div>
@@ -118,17 +118,17 @@ const ContactPage = () => {
             {/* Right — form */}
             <div>
               {status === 'success' ? (
-                <div className="h-full flex flex-col items-center justify-center text-center p-10 border border-border rounded-lg bg-bg-secondary shadow-sm">
-                  <div className="w-12 h-12 rounded-full bg-bg-primary border border-border flex items-center justify-center mb-6">
-                    <span className="text-text-primary text-xl font-semibold">✓</span>
+                <div className="h-full flex flex-col items-center justify-center text-center p-10 border border-white/10 rounded-lg bg-[#121212] shadow-sm">
+                  <div className="w-12 h-12 rounded-full bg-black border border-white/10 flex items-center justify-center mb-6">
+                    <span className="text-white text-xl font-semibold">✓</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-text-primary mb-3 font-space-grotesk">Message received.</h2>
-                  <p className="text-text-secondary text-sm leading-relaxed mb-6">
+                  <h2 className="text-2xl font-bold text-white mb-3 font-space-grotesk">Message received.</h2>
+                  <p className="text-[#a1a1aa] text-sm leading-relaxed mb-6">
                     The Iterate First team will review your request and be in touch within one business day.
                   </p>
                   <Link
                     to="/"
-                    className="text-sm text-text-secondary hover:text-text-primary underline underline-offset-4 transition-colors"
+                    className="text-sm text-[#a1a1aa] hover:text-white underline underline-offset-4 transition-colors"
                   >
                     Back to home
                   </Link>
@@ -137,10 +137,10 @@ const ContactPage = () => {
                 <form
                   onSubmit={handleSubmit}
                   aria-label="Contact Iterate First"
-                  className="space-y-5 p-8 border border-border rounded-lg bg-bg-secondary shadow-sm"
+                  className="space-y-5 p-8 border border-white/10 rounded-lg bg-[#121212] shadow-sm"
                 >
                   <div>
-                    <label htmlFor="name" className="block text-[10px] text-text-secondary/70 uppercase tracking-widest font-mono mb-2">
+                    <label htmlFor="name" className="block text-[10px] text-[#a1a1aa]/70 uppercase tracking-widest font-mono mb-2">
                       Name
                     </label>
                     <input
@@ -151,11 +151,11 @@ const ContactPage = () => {
                       value={form.name}
                       onChange={handleChange}
                       placeholder="Your name"
-                      className="w-full bg-bg-secondary border border-border rounded-sm px-4 py-3 text-sm text-text-primary placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors"
+                      className="w-full bg-[#121212] border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors"
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-[10px] text-text-secondary/70 uppercase tracking-widest font-mono mb-2">
+                    <label htmlFor="email" className="block text-[10px] text-[#a1a1aa]/70 uppercase tracking-widest font-mono mb-2">
                       Email
                     </label>
                     <input
@@ -166,12 +166,12 @@ const ContactPage = () => {
                       value={form.email}
                       onChange={handleChange}
                       placeholder="you@company.com"
-                      className="w-full bg-bg-secondary border border-border rounded-sm px-4 py-3 text-sm text-text-primary placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors"
+                      className="w-full bg-[#121212] border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors"
                     />
                   </div>
                   <div>
-                    <label htmlFor="company" className="block text-[10px] text-text-secondary/70 uppercase tracking-widest font-mono mb-2">
-                      Company <span className="text-text-secondary/30">(optional)</span>
+                    <label htmlFor="company" className="block text-[10px] text-[#a1a1aa]/70 uppercase tracking-widest font-mono mb-2">
+                      Company <span className="text-[#a1a1aa]/30">(optional)</span>
                     </label>
                     <input
                       id="company"
@@ -180,11 +180,11 @@ const ContactPage = () => {
                       value={form.company}
                       onChange={handleChange}
                       placeholder="Your company name"
-                      className="w-full bg-bg-secondary border border-border rounded-sm px-4 py-3 text-sm text-text-primary placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors"
+                      className="w-full bg-[#121212] border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors"
                     />
                   </div>
                   <div>
-                    <label htmlFor="message" className="block text-[10px] text-text-secondary/70 uppercase tracking-widest font-mono mb-2">
+                    <label htmlFor="message" className="block text-[10px] text-[#a1a1aa]/70 uppercase tracking-widest font-mono mb-2">
                       What do you want to automate?
                     </label>
                     <textarea
@@ -195,7 +195,7 @@ const ContactPage = () => {
                       value={form.message}
                       onChange={handleChange}
                       placeholder="Describe your workflow, process, or system..."
-                      className="w-full bg-bg-secondary border border-border rounded-sm px-4 py-3 text-sm text-text-primary placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors resize-none"
+                      className="w-full bg-[#121212] border border-white/10 rounded-sm px-4 py-3 text-sm text-white placeholder-text-secondary/30 focus:outline-none focus:border-text-primary/30 transition-colors resize-none"
                     />
                   </div>
                   {status === 'error' && (
@@ -210,7 +210,7 @@ const ContactPage = () => {
                   >
                     {status === 'loading' ? 'Sending...' : 'Send to Iterate First →'}
                   </button>
-                  <p className="text-center text-[10px] text-text-secondary/40 font-mono">
+                  <p className="text-center text-[10px] text-[#a1a1aa]/40 font-mono">
                     No spam. No sales calls. Just automation.
                   </p>
                 </form>
