@@ -5,15 +5,17 @@ import { createRequire } from 'module'
 import path from 'path'
 
 const require = createRequire(import.meta.url)
-const prerender = require('vite-plugin-prerender')
+const prerender = process.env.VERCEL ? null : require('vite-plugin-prerender')
 
 export default defineConfig({
   plugins: [
     react(),
-    prerender({
-      staticDir: path.resolve(process.cwd(), 'dist'),
-      routes: ['/', '/about', '/features', '/use-cases', '/contact', '/blog'],
-    })
+    ...(prerender ? [
+      prerender({
+        staticDir: path.resolve(process.cwd(), 'dist'),
+        routes: ['/', '/about', '/features', '/use-cases', '/contact', '/blog'],
+      })
+    ] : [])
   ],
   server: {
     port: 3000,
