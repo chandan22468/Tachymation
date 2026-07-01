@@ -1,25 +1,25 @@
 export const getOrganizationSchema = () => ({
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": "Tachymation",
-  "url": "https://tachymation.vercel.app",
-  "logo": "https://tachymation.vercel.app/favicon.png",
+  "name": "Iterate First",
+  "url": "https://iteratefirst.xyz",
+  "logo": "https://iteratefirst.xyz/favicon.png",
   "sameAs": [
-    "https://twitter.com/tachymation",
-    "https://linkedin.com/company/tachymation",
-    "https://github.com/tachymation"
+    "https://twitter.com/iteratefirst",
+    "https://linkedin.com/company/iteratefirst",
+    "https://github.com/iteratefirst"
   ],
-  "description": "Tachymation is an AI automation platform that helps businesses and startups automate workflows, websites, and enterprise systems."
+  "description": "Iterate First is an AI automation platform that helps businesses and startups automate workflows, websites, and enterprise systems."
 });
 
 export const getWebsiteSchema = () => ({
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": "Tachymation",
-  "url": "https://tachymation.vercel.app",
+  "name": "Iterate First",
+  "url": "https://iteratefirst.xyz",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://tachymation.vercel.app/search?q={search_term_string}",
+    "target": "https://iteratefirst.xyz/search?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 });
@@ -31,6 +31,6 @@ export const getBreadcrumbSchema = (items) => ({
     "@type": "ListItem",
     "position": index + 1,
     "name": item.name,
-    "item": `https://tachymation.vercel.app${item.path}`
+    "item": `https://iteratefirst.xyz${item.path}`
   }))
 });

@@ -5,7 +5,7 @@ Disallow: /_next/
 Disallow: /private/
 
 # Sitemaps
-Sitemap: https://tachymation.vercel.app/sitemap.xml
+Sitemap: https://iteratefirst.xyz/sitemap.xml
 
 # Host
-Host: https://tachymation.vercel.app
+Host: https://iteratefirst.xyz

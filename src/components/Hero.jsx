@@ -17,8 +17,8 @@ const MagneticButton = ({
 
   const baseClasses =
     variant === 'primary'
-      ? 'bg-white text-black hover:bg-white/90 font-bold tracking-tight'
-      : 'bg-transparent text-white/60 hover:text-white border border-white/20';
+      ? 'bg-white text-black hover:bg-white/90 font-semibold tracking-tight border border-transparent shadow-sm hover:shadow-md'
+      : 'bg-transparent text-white/70 hover:text-white border border-white/20 hover:border-white/40';
 
   return (
     <button
@@ -50,7 +50,7 @@ const Hero = () => {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    let scene, camera, renderer, particlesGeometry, particlesMaterial, particles, rafId;
+    let scene, camera, renderer, particlesGeometry, particlesMaterial, particles;
 
     // Defer initialization to avoid blocking main thread
     const initTimer = setTimeout(() => {
@@ -87,7 +87,7 @@ const Hero = () => {
         size: 0.15,
         color: '#ffffff',
         transparent: true,
-        opacity: 0.3,
+        opacity: 0.35,
         depthWrite: false
       });
       particles = new THREE.Points(particlesGeometry, particlesMaterial);
@@ -131,7 +131,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <section className="relative w-full h-screen overflow-hidden bg-[#050505] pt-[72px]">
+    <section className="relative w-full h-screen overflow-hidden bg-black pt-[72px]">
 
       {/* Background Canvas */}
       <canvas
@@ -145,27 +145,35 @@ const Hero = () => {
 
         {/* ── LEFT TEXT ── */}
         <div className="flex-1 flex flex-col justify-center items-center md:items-start text-center md:text-left max-w-[640px] mx-auto md:mx-0">
-          <p className="tracking-[0.45em] text-[10px] md:text-xs text-white/40 mb-4 md:mb-6 uppercase font-semibold">
-            tachymation SYSTEM
+          <p className="tracking-[0.45em] text-[10px] md:text-xs text-white/70 mb-4 md:mb-6 uppercase font-mono">
+            <span className="text-vercel-cyan font-bold drop-shadow-[0_0_8px_rgba(80,227,194,0.6)]">iteratefirst</span> SYSTEM
           </p>
 
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[75px] font-black italic uppercase leading-[0.9] tracking-[-0.02em] text-white break-words w-full">
-            <span className="sr-only">Tachymation: </span>
-            <span className="block">Move at the</span>
-            <span className="block mt-1 md:mt-2 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/30">
-              speed of thought.
+          <h1 className="font-space-grotesk uppercase leading-none tracking-[-0.03em] w-full flex flex-col items-center md:items-start select-none">
+            <span className="sr-only">Iterate First: Move at the speed of thought.</span>
+            {/* MOVE AT THE (technical eyebrow) */}
+            <span className="block font-mono text-xs md:text-sm tracking-[0.35em] text-white/50 uppercase mb-4">
+              Move at the
+            </span>
+            {/* SPEED (massive Display font) */}
+            <span className="block text-7xl sm:text-8xl md:text-9xl lg:text-[110px] font-bold tracking-tighter text-white leading-none">
+              Speed
+            </span>
+            {/* OF THOUGHT. (gradient/glow secondary display) */}
+            <span className="block text-4xl sm:text-5xl md:text-6xl lg:text-[58px] font-semibold tracking-tight text-white/80 leading-none mt-2">
+              of thought.
             </span>
           </h1>
 
           <p className="mt-4 md:mt-8 text-gray-400 text-sm md:text-base lg:text-lg max-w-[520px] leading-relaxed font-light px-4 md:px-0">
-            Advanced AI automation by <span className="text-white font-medium">Tachymation</span> that eliminates effort from websites to enterprise systems.
+            Advanced AI automation by <span className="text-vercel-cyan font-bold">Iterate First</span> that eliminates effort from websites to enterprise systems.
           </p>
 
           <div className="mt-8 md:mt-10 flex justify-center md:justify-start">
             <MagneticButton
               className="px-8 md:px-10 py-3 md:py-4 rounded-full text-[10px] md:text-xs uppercase tracking-[0.2em] w-full sm:w-auto"
               onClick={() => navigate('/contact')}
-              aria-label="Get early access to Tachymation"
+              aria-label="Get early access to Iterate First"
             >
               Get Early Access →
             </MagneticButton>
@@ -176,22 +184,17 @@ const Hero = () => {
         <div className="flex-[0.8] md:flex-1 flex justify-center md:justify-end items-center relative w-full h-[40vh] md:h-full mt-4 md:mt-0">
           <div className="relative group w-full flex justify-center md:justify-end">
 
-            {/* Ambient glow layers */}
-            <div aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[250px] h-[250px] sm:w-[350px] sm:h-[350px] md:w-[600px] md:h-[600px] bg-white opacity-[0.09] blur-[130px] rounded-full pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.14]" />
-            <div aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/3 -translate-y-1/2 w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] md:w-[400px] md:h-[400px] bg-white opacity-[0.06] blur-[80px] rounded-full pointer-events-none transition-opacity duration-700 group-hover:opacity-[0.10]" />
+            {/* Ambient white spotlight glow layer */}
+            <div aria-hidden="true" className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[150px] h-[150px] md:w-[350px] md:h-[350px] bg-white opacity-[0.08] blur-[80px] md:blur-[120px] rounded-full pointer-events-none" />
 
             {/* Eagle logo */}
             <img
               src="/favicon.webp"
-              alt="Tachymation AI Automation Logo - Intelligent Workflow Systems"
+              alt="Iterate First AI Automation Logo - Intelligent Workflow Systems"
               width="620"
               height="620"
               loading="eager"
-              className="relative z-10 w-[200px] sm:w-[280px] md:w-[500px] lg:w-[620px] object-contain
-                         transition-all duration-700 ease-out
-                         group-hover:scale-[1.05] md:group-hover:scale-[1.1]
-                         drop-shadow-[0_0_30px_rgba(255,255,255,0.20)] md:drop-shadow-[0_0_55px_rgba(255,255,255,0.30)]
-                         group-hover:drop-shadow-[0_0_60px_rgba(255,255,255,0.40)] md:group-hover:drop-shadow-[0_0_90px_rgba(255,255,255,0.50)]"
+              className="relative z-10 w-[200px] sm:w-[280px] md:w-[500px] lg:w-[620px] object-contain logo-glow-effect animate-logo-float group-hover:scale-[1.05] md:group-hover:scale-[1.1]"
               fetchpriority="high"
               decoding="async"
             />
@@ -200,7 +203,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-20 hover:opacity-100 transition-opacity cursor-pointer z-20">
+      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 opacity-40 hover:opacity-100 transition-opacity cursor-pointer z-20">
         <span className="text-[9px] uppercase tracking-[0.4em] font-bold text-white">
           Explore
         </span>

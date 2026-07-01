@@ -54,7 +54,7 @@ const LoadingScreen = ({ onComplete }) => {
     };
   }, [onComplete]);
 
-  const brandName = 'Tachymation';
+  const brandName = 'Iterate First';
 
   return (
     <div

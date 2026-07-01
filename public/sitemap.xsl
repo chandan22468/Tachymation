@@ -8,7 +8,7 @@
   <xsl:template match="/">
     <html lang="en">
       <head>
-        <title>Sitemap – Tachymation</title>
+        <title>Sitemap – Iterate First</title>
         <meta charset="UTF-8"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <style>
@@ -74,7 +74,7 @@
         </style>
       </head>
       <body>
-        <h1>Tachymation Sitemap</h1>
+        <h1>Iterate First Sitemap</h1>
         <p class="subtitle">
           <xsl:value-of select="count(sitemap:urlset/sitemap:url)"/> URLs indexed
         </p>

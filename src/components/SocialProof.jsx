@@ -47,12 +47,12 @@ const SocialProof = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-8 bg-[#111111] overflow-hidden"
+      className="w-full py-8 bg-bg-primary border-y border-border overflow-hidden"
     >
       {/* Clients Row */}
       <div className="relative mb-6">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#111111] to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#111111] to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-bg-primary to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-bg-primary to-transparent z-10" />
         
         <div className="flex animate-scroll">
           {[...clients, ...clients].map((client, index) => (
@@ -68,8 +68,8 @@ const SocialProof = () => {
 
       {/* Stats Row */}
       <div className="relative">
-        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#111111] to-transparent z-10" />
-        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#111111] to-transparent z-10" />
+        <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-bg-primary to-transparent z-10" />
+        <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-bg-primary to-transparent z-10" />
         
         <div className="flex animate-scroll-reverse">
           {[...stats, ...stats].map((stat, index) => (
@@ -77,7 +77,7 @@ const SocialProof = () => {
               key={index}
               className="font-mono text-sm text-text-primary whitespace-nowrap px-8 flex items-center gap-2"
             >
-              <span className="w-1 h-1 rounded-full bg-white" />
+              <span className="w-1 h-1 rounded-full bg-text-primary" />
               {stat}
             </span>
           ))}

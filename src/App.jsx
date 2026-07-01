@@ -2,7 +2,6 @@ import { useState, Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import useLenis from './hooks/useLenis';
-import CustomCursor from './components/CustomCursor';
 import LoadingScreen from './components/LoadingScreen';
 import Navbar from './components/Navbar';
 import ScrollToTop from './components/ScrollToTop';
@@ -32,7 +31,6 @@ function AppShell() {
   return (
     <div className="relative w-full overflow-x-hidden">
       {isLoading && <LoadingScreen onComplete={handleLoadingComplete} />}
-      {showContent && <CustomCursor />}
 
       <Navbar />
 

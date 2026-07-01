@@ -6,11 +6,11 @@ const SEO = ({
   canonical,
   ogImage = '/favicon.png',
   ogType = 'website',
-  twitterHandle = '@tachymation',
+  twitterHandle = '@iteratefirst',
 }) => {
-  const siteName = 'Tachymation';
+  const siteName = 'Iterate First';
   const fullTitle = `${title} | ${siteName}`;
-  const url = `https://tachymation.vercel.app${canonical}`;
+  const url = `https://iteratefirst.xyz${canonical}`;
 
   return (
     <Helmet>

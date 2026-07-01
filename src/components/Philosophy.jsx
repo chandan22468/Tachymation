@@ -63,7 +63,7 @@ const Philosophy = () => {
     <section
       ref={sectionRef}
       id="philosophy"
-      className="relative w-full py-32 md:py-48 px-6 md:px-16 bg-dark-panel overflow-hidden"
+      className="relative w-full py-32 md:py-48 px-6 md:px-16 bg-bg-secondary overflow-hidden"
     >
       {/* Parallax Background */}
       <div
@@ -83,15 +83,15 @@ const Philosophy = () => {
           {wrapWords('Most automation tools give you:')}
         </p>
         
-        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl text-white mb-8">
+        <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl lg:text-6xl text-text-primary mb-8">
           {wrapWords('"More complexity."')}
         </h2>
 
         <p className="font-body text-text-secondary mb-4">
-          {wrapWords('tachymation gives you:')}
+          {wrapWords('iteratefirst gives you:')}
         </p>
 
-        <h2 className="font-drama text-4xl md:text-6xl lg:text-8xl text-white mb-8">
+        <h2 className="font-drama text-4xl md:text-6xl lg:text-8xl text-text-primary mb-8">
           {wrapWords('Less everything.')}
         </h2>
 

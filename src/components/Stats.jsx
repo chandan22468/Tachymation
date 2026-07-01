@@ -47,7 +47,7 @@ const AnimatedCounter = ({ value, suffix, isDecimal }) => {
   }, [value, isDecimal]);
 
   return (
-    <span ref={counterRef} className="font-display text-5xl md:text-7xl text-text-primary">
+    <span ref={counterRef} className="font-space-grotesk font-bold text-5xl md:text-7xl text-text-primary">
       {displayValue}{suffix}
     </span>
   );
@@ -88,14 +88,14 @@ const Stats = () => {
   return (
     <section
       ref={sectionRef}
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-[#111111]"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-bg-primary"
     >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="stat-card bg-[#1A1A1A] rounded-3xl p-6 md:p-8 text-center border border-[#333333] shadow-sm"
+              className="stat-card bg-bg-secondary rounded-lg p-6 md:p-8 text-center border border-border shadow-sm"
             >
               <div className="mb-3">
                 <AnimatedCounter 
@@ -104,7 +104,7 @@ const Stats = () => {
                   isDecimal={stat.isDecimal} 
                 />
               </div>
-              <p className="font-display text-lg text-text-primary mb-1">
+              <p className="font-space-grotesk font-bold text-lg text-text-primary mb-1">
                 {stat.label}
               </p>
               <p className="font-body text-sm text-text-secondary">

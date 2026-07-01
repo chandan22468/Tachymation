@@ -15,7 +15,7 @@ const steps = [
     number: '2',
     title: 'Our AI gets to work.',
     description:
-      "tachymation's AI models break the task into components, assign the right automation stack, and begin building in parallel.",
+      "iteratefirst's AI models break the task into components, assign the right automation stack, and begin building in parallel.",
   },
   {
     number: '3',
@@ -86,13 +86,13 @@ const HowItWorks = () => {
     <section
       ref={sectionRef}
       id="how-it-works"
-      aria-label="How Tachymation AI Automation Works"
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-black"
+      aria-label="How Iterate First AI Automation Works"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-bg-secondary"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 md:mb-20 text-center">
-          <h2 className="font-display text-3xl md:text-5xl text-text-primary mb-4">
+          <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-text-primary mb-4">
             Three steps. No learning curve.
           </h2>
         </div>
@@ -123,27 +123,27 @@ const HowItWorks = () => {
                 {/* Step Number (Background Decor) */}
                 <span 
                   className="absolute -top-20 -left-6 md:-top-28 md:-left-10
-                            font-display text-[8rem] md:text-[10rem]
+                            font-space-grotesk font-bold text-[8rem] md:text-[10rem]
                             leading-none select-none pointer-events-none z-0
-                            text-transparent [-webkit-text-stroke:1px_rgba(255,255,255,0.12)]
-                            group-hover:[-webkit-text-stroke:1px_rgba(255,255,255,0.25)]
+                            text-transparent [-webkit-text-stroke:1px_rgba(23,23,23,0.08)]
+                            group-hover:[-webkit-text-stroke:1px_rgba(23,23,23,0.18)]
                             transition-all duration-700 ease-out translate-y-4 group-hover:translate-y-0"
                 >
                   {step.number}
                 </span>
 
                 {/* Card Context */}
-                <div className="relative z-10 bg-[#1A1A1A]/80 backdrop-blur-xl rounded-3xl p-8 md:p-10 border border-[#333333] shadow-[0_8px_32px_rgba(0,0,0,0.4)]
-                                transition-all duration-500 hover:bg-[#1f1f1f]/90 hover:-translate-y-1">
+                <div className="relative z-10 bg-bg-secondary/80 backdrop-blur-xl rounded-lg p-8 md:p-10 border border-border shadow-sm
+                                transition-all duration-500 hover:bg-bg-primary/90 hover:-translate-y-1">
                   <div className="flex items-center gap-3 mb-6">
-                    <span className="w-10 h-10 rounded-full bg-white text-black flex items-center justify-center font-mono text-sm font-bold shadow-[0_0_15px_rgba(255,255,255,0.3)]">
+                    <span className="w-10 h-10 rounded-full bg-accent text-white flex items-center justify-center font-mono text-sm font-bold shadow-sm">
                       {step.number}
                     </span>
                   </div>
-                  <h3 className="font-display text-xl md:text-2xl text-white mb-4">
+                  <h3 className="font-space-grotesk font-bold text-xl md:text-2xl text-text-primary mb-4">
                     {step.title}
                   </h3>
-                  <p className="font-body text-[#A1A1AA] leading-relaxed text-sm md:text-base">
+                  <p className="font-body text-text-secondary leading-relaxed text-sm md:text-base">
                     {step.description}
                   </p>
                 </div>

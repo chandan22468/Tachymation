@@ -34,15 +34,15 @@ const BuildEngineCard = () => {
   return (
     <div
       ref={cardRef}
-      className="bg-[#1A1A1A] border border-[#333333] rounded-3xl p-6 md:p-8 h-full"
+      className="bg-bg-secondary border border-border rounded-lg p-6 md:p-8 h-full shadow-sm hover:shadow-md transition-all duration-300"
       style={{ perspective: '800px', transformStyle: 'preserve-3d' }}
     >
-      <h3 className="font-display text-xl md:text-2xl text-text-primary mb-6">
+      <h3 className="font-space-grotesk font-semibold text-xl md:text-2xl text-text-primary mb-6">
         Websites. Built. Instantly.
       </h3>
       
       <div className="space-y-3">
-        <div className="flex justify-between text-sm font-mono text-white/50 pb-2 border-b border-[#333333]">
+        <div className="flex justify-between text-sm font-mono text-text-secondary/60 pb-2 border-b border-border">
           <span>Task</span>
           <span>Status</span>
         </div>
@@ -55,7 +55,7 @@ const BuildEngineCard = () => {
               }`}
             >
               <span className="font-body text-text-primary">{build.task}</span>
-              <span className="font-mono text-white">✓ {build.status}</span>
+              <span className="font-mono text-text-primary font-medium">✓ {build.status}</span>
             </div>
           ))}
         </div>
@@ -119,9 +119,9 @@ const AutomationConsoleCard = () => {
   return (
     <div
       ref={consoleRef}
-      className="bg-dark-panel border border-gray-800 rounded-3xl p-6 md:p-8 h-full"
+      className="bg-black border border-[#222] rounded-lg p-6 md:p-8 h-full"
     >
-      <h3 className="font-display text-xl md:text-2xl text-white mb-6">
+      <h3 className="font-space-grotesk font-semibold text-xl md:text-2xl text-white mb-6">
         Any workflow. Any system.
       </h3>
       
@@ -177,8 +177,8 @@ const EfficiencySignalCard = () => {
   ];
 
   return (
-    <div className="bg-[#1A1A1A] border border-[#333333] rounded-3xl p-6 md:p-8 h-full">
-      <h3 className="font-display text-xl md:text-2xl text-text-primary mb-6">
+    <div className="bg-bg-secondary border border-border rounded-lg p-6 md:p-8 h-full shadow-sm hover:shadow-md transition-all duration-300">
+      <h3 className="font-space-grotesk font-semibold text-xl md:text-2xl text-text-primary mb-6">
         Hours saved. Measured.
       </h3>
       
@@ -192,7 +192,7 @@ const EfficiencySignalCard = () => {
               y1={150 - y}
               x2="300"
               y2={150 - y}
-              stroke="#333333"
+              stroke="#EBEBEB"
               strokeWidth="1"
             />
           ))}
@@ -202,7 +202,7 @@ const EfficiencySignalCard = () => {
             ref={pathRef}
             d="M 0,140 Q 75,130 150,80 T 300,20"
             fill="none"
-            stroke="#FFFFFF"
+            stroke="#171717"
             strokeWidth="2"
             strokeLinecap="round"
           />
@@ -214,7 +214,7 @@ const EfficiencySignalCard = () => {
                 cx={(point.week / 12) * 300}
                 cy={150 - (point.hours / 340) * 130}
                 r="4"
-                fill="#FFFFFF"
+                fill="#171717"
                 className="animate-pulse"
               />
             </g>
@@ -229,9 +229,9 @@ const EfficiencySignalCard = () => {
         </div>
       </div>
       
-      <div className="flex justify-between items-center mt-4 pt-4 border-t border-[#333333]">
+      <div className="flex justify-between items-center mt-4 pt-4 border-t border-border">
         <span className="font-mono text-sm text-text-secondary">Hours Saved / Week</span>
-        <span className="font-mono text-lg text-white font-medium">340 hrs</span>
+        <span className="font-mono text-lg text-text-primary font-semibold">340 hrs</span>
       </div>
     </div>
   );
@@ -274,13 +274,13 @@ const Features = () => {
     <section
       ref={sectionRef}
       id="features"
-      aria-label="Tachymation AI Automation Features"
-      className="w-full py-24 md:py-32 px-6 md:px-16 bg-black"
+      aria-label="Iterate First AI Automation Features"
+      className="w-full py-24 md:py-32 px-6 md:px-16 bg-bg-primary border-t border-border"
     >
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="mb-16 md:mb-20">
-          <h2 className="font-display text-3xl md:text-5xl text-text-primary mb-4">
+          <h2 className="font-space-grotesk font-bold text-3xl md:text-5xl text-text-primary mb-4">
             What we eliminate.
           </h2>
           <p className="font-body text-lg text-text-secondary max-w-xl">

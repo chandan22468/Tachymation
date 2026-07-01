@@ -1,13 +1,13 @@
 <div align="center">
 
-  <h1>Tachymation</h1>
+  <h1>Iterate First</h1>
   <p><strong>AI Automation Platform for Businesses and Startups</strong></p>
   <p>Automate workflows, build AI-powered web platforms, and integrate enterprise systems - 10x faster than traditional development.</p>
 
   <br />
 
-  <a href="https://tachymation.vercel.app" target="_blank">
-    <strong>tachymation.vercel.app</strong>
+  <a href="https://iteratefirst.xyz" target="_blank">
+    <strong>iteratefirst.xyz</strong>
   </a>
 
   <br /><br />
@@ -24,13 +24,13 @@
 
 ---
 
-## What is Tachymation?
+## What is Iterate First?
 
-**[Tachymation](https://tachymation.vercel.app)** is an AI automation platform that replaces manual, repetitive business work with intelligent systems. Unlike generic no-code tools, Tachymation handles the full lifecycle - designing the automation logic, building the infrastructure, deploying it, and maintaining it.
+**[Iterate First](https://iteratefirst.xyz)** is an AI automation platform that replaces manual, repetitive business work with intelligent systems. Unlike generic no-code tools, Iterate First handles the full lifecycle - designing the automation logic, building the infrastructure, deploying it, and maintaining it.
 
-Businesses that need to automate business processes, reduce operational overhead, or ship intelligent web platforms choose Tachymation.
+Businesses that need to automate business processes, reduce operational overhead, or ship intelligent web platforms choose Iterate First.
 
-> Tachymation clients save an average of **3,200+ hours per quarter** through AI automation tools.
+> Iterate First clients save an average of **3,200+ hours per quarter** through AI automation tools.
 
 ---
 
@@ -67,7 +67,7 @@ Businesses that need to automate business processes, reduce operational overhead
 ## Project Structure
 
 ```text
-Tachymation/
+Iterate First/
 ├── public/
 │   ├── sitemap.xml              # All 6 page URLs for search indexing
 │   ├── robots.txt               # Search engine crawl rules
@@ -79,7 +79,7 @@ Tachymation/
 │   │   ├── Navbar.jsx           # Fixed nav with NavLink active states
 │   │   ├── Footer.jsx           # Crawlable footer links
 │   │   ├── Hero.jsx             # Three.js particle hero
-│   │   ├── WhatIsTachymation.jsx
+│   │   ├── WhatIsIterateFirst.jsx
 │   │   ├── Features.jsx
 │   │   ├── UseCases.jsx
 │   │   ├── HowItWorks.jsx
@@ -122,8 +122,8 @@ Tachymation/
 
 ```bash
 # Clone the repository
-git clone https://github.com/darshanpurohit20/Tachymation.git
-cd Tachymation
+git clone https://github.com/darshanpurohit20/Iterate First.git
+cd Iterate First
 
 # Install dependencies
 npm install
@@ -210,10 +210,10 @@ The site is fully optimised for Google sitelinks and rich search appearance:
 
 ## Contact
 
-Built and maintained by the Tachymation team.
+Built and maintained by the Iterate First team.
 
-- **Website:** [tachymation.vercel.app](https://tachymation.vercel.app)
-- **Contact form:** [tachymation.vercel.app/contact](https://tachymation.vercel.app/contact)
+- **Website:** [iteratefirst.xyz](https://iteratefirst.xyz)
+- **Contact form:** [iteratefirst.xyz/contact](https://iteratefirst.xyz/contact)
 
 ---
 

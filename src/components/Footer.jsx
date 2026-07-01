@@ -13,19 +13,19 @@ const footerLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black border-t border-[#222] rounded-t-[3.5rem] px-6 md:px-16 pt-16 pb-8">
+    <footer className="w-full bg-bg-secondary border-t border-border px-6 md:px-16 pt-16 pb-8">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
 
           {/* Left: Logo & Tagline */}
           <div>
-            <Link to="/" aria-label="Tachymation home">
+            <Link to="/" aria-label="Iterate First home">
               <img
                 src={eagleLogo}
-                alt="Tachymation — AI Automation Platform"
+                alt="Iterate First — AI Automation Platform"
                 width="32"
                 height="32"
-                className="h-8 w-auto mb-4 drop-shadow-[0_0_10px_rgba(255,255,255,0.3)]"
+                className="h-8 w-auto mb-4 drop-shadow-[0_0_8px_rgba(0,0,0,0.08)]"
                 loading="lazy"
                 decoding="async"
               />
@@ -34,19 +34,19 @@ const Footer = () => {
               Eagle-like speed. Enterprise-grade output.
             </p>
             <p className="font-body text-text-secondary text-xs mt-2 max-w-[220px] leading-relaxed">
-              Tachymation is an AI automation platform for businesses and startups.
+              Iterate First is an AI automation platform for businesses and startups.
             </p>
           </div>
 
           {/* Center: Crawlable navigation links */}
           <nav aria-label="Footer navigation">
-            <p className="font-mono text-xs text-white/30 uppercase tracking-widest mb-4">Navigate</p>
+            <p className="font-mono text-xs text-text-secondary/60 uppercase tracking-widest mb-4">Navigate</p>
             <div className="flex flex-wrap gap-x-6 gap-y-3">
               {footerLinks.map(({ to, label }) => (
                 <Link
                   key={to}
                   to={to}
-                  className="font-body text-sm text-text-secondary hover:text-white transition-colors duration-300"
+                  className="font-body text-sm text-text-secondary hover:text-text-primary transition-colors duration-300"
                 >
                   {label}
                 </Link>
@@ -58,29 +58,29 @@ const Footer = () => {
           <div className="flex flex-col md:items-end gap-4">
             <div className="flex items-center gap-4">
               <a
-                href="https://twitter.com/tachymation"
+                href="https://twitter.com/iteratefirst"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="Tachymation on Twitter"
+                className="text-text-secondary hover:text-text-primary transition-colors duration-300"
+                aria-label="Iterate First on Twitter"
               >
                 <Twitter className="w-5 h-5" />
               </a>
               <a
-                href="https://linkedin.com/company/tachymation"
+                href="https://linkedin.com/company/iteratefirst"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="Tachymation on LinkedIn"
+                className="text-text-secondary hover:text-text-primary transition-colors duration-300"
+                aria-label="Iterate First on LinkedIn"
               >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a
-                href="https://github.com/tachymation"
+                href="https://github.com/iteratefirst"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-text-secondary hover:text-white transition-colors duration-300"
-                aria-label="Tachymation on GitHub"
+                className="text-text-secondary hover:text-text-primary transition-colors duration-300"
+                aria-label="Iterate First on GitHub"
               >
                 <Github className="w-5 h-5" />
               </a>
@@ -93,13 +93,13 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-gray-800">
+        <div className="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-border">
           <div className="flex items-center gap-2 mb-4 md:mb-0">
             <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="font-mono text-xs text-green-500">System Operational</span>
+            <span className="font-mono text-xs text-green-600 font-medium">System Operational</span>
           </div>
           <p className="font-body text-xs text-text-secondary">
-            © {new Date().getFullYear()} Tachymation. All rights reserved.
+            © {new Date().getFullYear()} Iterate First. All rights reserved.
           </p>
         </div>
       </div>

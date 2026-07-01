@@ -7,22 +7,27 @@ export default {
   theme: {
     extend: {
       colors: {
-        'bg-primary': '#0A0A0A',
-        'bg-secondary': '#111111',
-        'text-primary': '#FFFFFF',
-        'text-secondary': '#888888',
-        'accent': '#FFFFFF',
-        'accent-soft': '#1A1A1A',
+        'bg-primary': '#FAFAFA',      // Canvas Soft
+        'bg-secondary': '#FFFFFF',    // Canvas
+        'text-primary': '#171717',    // Ink
+        'text-secondary': '#4D4D4D',  // Body
+        'accent': '#171717',          // Ink
+        'accent-soft': '#F5F5F5',     // Canvas Soft 2
         'dark-panel': '#000000',
-        'gold': '#FFFFFF',
-        'tint': '#111111',
-        'border': '#333333',
+        'gold': '#0070F3',            // Blue accent link
+        'tint': '#FAFAFA',
+        'border': '#EBEBEB',          // Hairline
+        'vercel-cyan': '#50E3C2',
+        'vercel-pink': '#FF0080',
+        'vercel-violet': '#7928CA',
+        'vercel-link': '#0070F3',
       },
       fontFamily: {
         'display': ['Cabinet Grotesk', 'sans-serif'],
         'drama': ['Instrument Serif', 'serif'],
         'body': ['General Sans', 'sans-serif'],
         'mono': ['Geist Mono', 'monospace'],
+        'space-grotesk': ['Space Grotesk', 'sans-serif'],
       },
       borderRadius: {
         '3xl': '1.5rem',
